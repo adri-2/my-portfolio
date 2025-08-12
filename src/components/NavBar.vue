@@ -1,8 +1,14 @@
 <template>
   <header
-    class="flex justify-between items-center p-6 bg-opacity-50 relative z-20"
+    class="flex justify-between items-center p-2 bg-opacity-50 relative z-20"
   >
-    <div class="text-white text-3x1 font-bold">LOGO</div>
+    <div class="text-white text-3x1 font-bold pt-2">
+      <img
+        src="../assets/logo.png"
+        class="w-[64px] h-[64px] rounded-full"
+        alt=""
+      />
+    </div>
     <!-- Mobile Toggle Button -->
     <div class="md:hidden z-30">
       <button

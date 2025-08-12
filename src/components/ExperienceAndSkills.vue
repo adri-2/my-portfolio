@@ -1,5 +1,5 @@
 <template>
-  <section class="text-white mt-18" id>
+  <section class="text-white mt-18 pb-10" id>
     <div class="absolute rigth-0 top-[110rem] h-full w-full justify-end">
       <span class="flex opacity-20">
         <span class="w-16-h-332 rounded-l-full flex bg-primary blur-2xl">
@@ -19,7 +19,7 @@
             >Skills</span
           >
         </h2>
-        <div class="mt-8" v-for="skill in skills" :key="skill.id">
+        <div class="mt-8 " v-for="skill in skills" :key="skill.id">
           <div class="flex items-end justify-between" data-aos="fade-right">
             <h4 class="font-semibold uppercase text-white">
               {{ skill.name }}
@@ -42,7 +42,9 @@
         </h2>
         <div class=""></div>
       </div>
+      <div class="mt-30"></div>
     </div>
+    <!-- div -->
   </section>
 </template>
 <script setup>

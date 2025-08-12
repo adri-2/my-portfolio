@@ -74,24 +74,50 @@
             </button>
           </div>
         </div>
-        <div class="lg:h-full md:flex">
+        <div class="lg:h-full md:flex lg:items-center mt-5 min-sm:mt-12">
           <div
-            class="flex w-full h-96 min-h-[24rem] lg:w-full lg:h-full items-center relative"
+            class="flex w-full h-full min-h-[25rem] lg:w-full lg:h-full items-end relative justify-center  "
           >
-            <div
+            <!-- <div
               class="absolute z-0 top-1/2 -translate-y-1/2 lg:min-h-[none] w-5/6 right-0 h-[calc(80%+20px)] bg-gradient-to-tr opacity-25 from-[#570cac] to-primary blur-2xl"
-            ></div>
+            ></div> -->
+
             <div
-              class="absolute h-full z-10 p-2 -translate-y-1/2 top-1/2 lg:right-3 md:right-40 sm:right-16 rounded-full shadow-lg border border-primary"
+              class=" h-90 w-90 z-10 p-2 -translate-y-1/2 top-1/2 lg:right-3 md:right-40 sm:right-14 rounded-full shadow-lg border border-primary flex justify-center items-end"
             >
               <img
                 src="../assets/photo-user.jpg"
                 alt=""
-                width="500"
-                height="auto"
+                width="250"
+                height="250"
                 loading="lazy"
-                class="w-full h-full rounded-full object-cover"
+                class="w-50 h-50 rounded-full object-fill"
               />
+              <div
+                class="absolute -top-5 left-1/2 transform -translate-x-1/2 w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center shadow  -m-7"
+              >
+                <i class="fa-brands fa-css3-alt fa-xl"></i>
+              </div>
+              <div
+                class="absolute top-1/2 -left-5 transform -translate-y-1/2 w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center shadow  -m-7"
+              >
+                <i class="fa-brands fa-github fa-xl"></i>
+              </div>
+              <div
+                class="absolute top-1/2 -right-5 transform -translate-y-1/2 w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center shadow  -m-10"
+              >
+                <i class="fa-brands fa-vuejs fa-xl"></i>
+              </div>
+              <div
+                class="absolute -bottom-5 left-1/2 transform -translate-x-1/2 w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center shadow -m-12"
+              >
+                <i class="fa-brands fa-html5 fa-xl" style="color: #03153f;"></i>
+              </div>
+              <div
+                class="absolute -bottom-5  right-3 transform -translate-x-1/2 w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center shadow -m-7"
+              >
+                <i class="fa-brands fa-python fa-xl"></i>
+              </div>
             </div>
           </div>
         </div>
