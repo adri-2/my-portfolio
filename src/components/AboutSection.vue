@@ -18,8 +18,11 @@
             :key="element.id"
             class="flex items-center md:w-[80%] w-full rounded-xl bg-[#111a3e] shadow-lg border border-[#1f1641]"
           >
-            <div class="w-1/4">
-              <img src="" alt="graduation-cap--v1" />
+            <div class="w-1/4 p-2">
+              <img
+                src="../assets/graduation-cap--v1.png"
+                alt="graduation-cap--v1"
+              />
             </div>
             <div class="w-3/4 pl-4">
               <h3
@@ -46,10 +49,10 @@
           Me
         </h2>
         <p class="text-base lg:text-lg mt-8 py-8">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam,
-          maxime ullam, dignissimos itaque nulla nihil q uo earum aspernatur
-          error off iciis sit inventore dolor ex perferendis, officia beatae.
-          Placeat, inventore similique.
+          Je suis un développeur full-stack passionné par la création
+          d’applications web performantes et visuellement soignées. Je combine
+          Python, Vue.js, React et Figma pour concevoir des solutions robustes
+          et intuitives.
         </p>
 
         <div class="grid grid-cols-3 gap-4 max-w-lg pt-8">
@@ -73,22 +76,22 @@ import { ref } from "vue";
 const education = ref([
   {
     id: 1,
-    school: "school 1",
-    program: "software",
-    year: "2022",
+    school: "IUT DE DOUALA",
+    program: "Diplôme Universitaire de Technologie (DUT) en Informatique",
+    year: "2024",
   },
   {
     id: 2,
-    school: "school 1",
-    program: "software",
-    year: "2023",
+    school: "IUT DE DOUALA",
+    program: "Licence Professionnelle en Génie Logiciel",
+    year: "2025",
   },
 ]);
 
 const box_infors = ref([
-  { h: "+200", p: "Happy client" },
+  { h: "+4", p: "Happy client" },
   { h: "3", p: "Years" },
   { h: "10", p: "Porjets" },
-  { h: "5", p: "Certifications" },
+  { h: "10", p: "Certifications" },
 ]);
 </script>
