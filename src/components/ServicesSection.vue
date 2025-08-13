@@ -4,7 +4,7 @@
       <h2 class="text-4xl font-bold text-white md-4">My Services</h2>
     </div>
     <div
-      class="py-8 xl:px-16 px-4 sm:py-16 grid grid-cols-1 gap-6 pt-10 sm:grid-cols-2 md:grap-10 md:pt-12 lg:grid-cols-3"
+      class="py-8 xl:px-16 px-4 sm:py-16 grid grid-cols-2 gap-6 pt-10 sm:grid-cols-2 md:grap-10 md:pt-12 "
     >
       <div
         v-for="service in services"
@@ -36,39 +36,27 @@ import { ref } from "vue";
 const services = ref([
   {
     id: 1,
-    icon: "src/assets/google-code.png",
-    name: "WEB DEVELOPMENT",
-    description: "lonknkazsexdrgvybuhnjmk,l ghj nk",
+    icon: "src/assets/Developer back c.png",
+    name: "DEVELOPMENT BACKEND",
+    description: "Python / Django / Flask : Développement d’API performantes et sécurisées.",
   },
   {
     id: 2,
-    icon: "src/assets/google-code.png",
-    name: "WEB DEVELOPMENT",
-    description: "lonknkazsexdrgvybuhnjmk,l ghj nk",
+    icon: "src/assets/Developer font.png",
+    name: "DEVELOPMENT FRONTEND",
+    description: "Création d’interfaces réactives et performantes et Conception d’interfaces intuitives et esthétiques. Utilisation de Vue.js et React.",
   },
   {
     id: 3,
-    icon: "src/assets/google-code.png",
-    name: "WEB DEVELOPMENT",
-    description: "lonknkazsexdrgvybuhnjmk,l ghj nk",
+    icon: "src/assets/wireframe c.png",
+    name: "CREATION D'INTERFACE FIGMA",
+    description: " Conception d’interfaces intuitives et esthétiques.",
   },
   {
     id: 4,
-    icon: "src/assets/google-code.png",
-    name: "WEB DEVELOPMENT",
-    description: "lonknkazsexdrgvybuhnjmk,l ghj nk",
-  },
-  {
-    id: 5,
-    icon: "src/assets/google-code.png",
-    name: "WEB DEVELOPMENT",
-    description: "lonknkazsexdrgvybuhnjmk,l ghj nk",
-  },
-  {
-    id: 6,
-    icon: "src/assets/google-code.png",
-    name: "WEB DEVELOPMENT",
-    description: "lonknkazsexdrgvybuhnjmk,l ghj nk",
-  },
+    icon: "src/assets/Data extraction c.png",
+    name: "DATA ANALYSIS",
+    description: "Analyse de données, modélisation et prédictions avec Python.",
+  }
 ]);
 </script>
