@@ -83,7 +83,73 @@
     <!-- div -->
   </section>
 </template>
+
 <script setup>
+import { ref } from "vue";
+
+// Imports
+import pythonIcon from "@/assets/icons8-python.svg";
+import tailwindIcon from "@/assets/icons8-tailwind-css.svg";
+import sqlIcon from "@/assets/icons8-sql-48.png";
+import mysqlIcon from "@/assets/icons8-logo-de-mysql.svg";
+import postgresIcon from "@/assets/icons8-postgresql.svg";
+import mongoIcon from "@/assets/icons8-mongo-db-48.png";
+
+import vueIcon from "@/assets/icons8-vue-js.svg";
+import reactIcon from "@/assets/icons8-react-native.svg";
+import htmlIcon from "@/assets/icons8-html-5.svg";
+import cssIcon from "@/assets/icons8-logo-css.svg";
+import jsIcon from "@/assets/icons8-javascript.svg";
+
+import djangoIcon from "@/assets/icons8-django.svg";
+import wordpressIcon from "@/assets/icons8-wordpress.svg";
+import nodeIcon from "@/assets/icons8-nodejs.svg";
+import expressIcon from "@/assets/icons8-express-js.svg";
+
+import githubIcon from "@/assets/icons8-logo-github.svg";
+import gitIcon from "@/assets/icons8-git.svg";
+import postmanIcon from "@/assets/postman-icon.svg";
+import canvaIcon from "@/assets/icons8-toile.svg";
+import figmaIcon from "@/assets/icons8-figma.svg";
+import linuxIcon from "@/assets/icons8-linux-48.png";
+import dockerIcon from "@/assets/icons8-logo-docker.svg";
+
+const skills = ref({
+  languages: [
+    { id: 1, name: "PYTHON", icon: pythonIcon },
+    { id: 3, name: "TAILWIND CSS", icon: tailwindIcon },
+    { id: 4, name: "SQL", icon: sqlIcon },
+    { id: 5, name: "MYSQL", icon: mysqlIcon },
+    { id: 6, name: "POSTGRESQL", icon: postgresIcon },
+    { id: 21, name: "MONGODB", icon: mongoIcon }
+  ],
+  frontend: [
+    { id: 7, name: "VUE JS", icon: vueIcon },
+    { id: 8, name: "REACT JS", icon: reactIcon },
+    { id: 9, name: "HTML", icon: htmlIcon },
+    { id: 10, name: "CSS", icon: cssIcon },
+    { id: 11, name: "JAVASCRIPT", icon: jsIcon },
+  ],
+  backend: [
+    { id: 12, name: "DJANGO", icon: djangoIcon },
+    { id: 14, name: "WORDPRESS", icon: wordpressIcon },
+    { id: 15, name: "NODE JS", icon: nodeIcon },
+    { id: 16, name: "EXPRESS JS", icon: expressIcon },
+  ],
+  tools: [
+    { id: 15, name: "GITHUB", icon: githubIcon },
+    { id: 16, name: "GIT", icon: gitIcon },
+    { id: 22, name: "POSTMAN", icon: postmanIcon },
+    { id: 17, name: "CANVA", icon: canvaIcon },
+    { id: 18, name: "FIGMA", icon: figmaIcon },
+    { id: 19, name: "LINUX", icon: linuxIcon },
+    { id: 20, name: "DOCKER", icon: dockerIcon },
+  ],
+});
+</script>
+
+
+<!-- <script setup>
 import { ref } from "vue";
 const skills = ref({
   languages: [
@@ -120,4 +186,4 @@ const skills = ref({
     { id: 20, name: "DOCKER", icon: "src/assets/icons8-logo-docker.svg" },
   ],
 });
-</script>
+</script> -->

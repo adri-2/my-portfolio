@@ -31,8 +31,9 @@
     </div>
   </section>
 </template>
-<script setup>
+<!-- <script setup>
 import { ref } from "vue";
+
 const services = ref([
   {
     id: 1,
@@ -59,4 +60,39 @@ const services = ref([
     description: "Analyse de données, modélisation et prédictions avec Python.",
   }
 ]);
+</script> -->
+<script setup>
+import { ref } from "vue"
+
+import backendIcon from "@/assets/Developer back c.png"
+import frontendIcon from "@/assets/Developer font.png"
+import figmaIcon from "@/assets/wireframe c.png"
+import dataIcon from "@/assets/Data extraction c.png"
+
+const services = ref([
+  {
+    id: 1,
+    icon: backendIcon,
+    name: "DEVELOPMENT BACKEND",
+    description: "Python / Django / Flask : Développement d’API performantes et sécurisées.",
+  },
+  {
+    id: 2,
+    icon: frontendIcon,
+    name: "DEVELOPMENT FRONTEND",
+    description: "Création d’interfaces réactives et performantes et Conception d’interfaces intuitives et esthétiques. Utilisation de Vue.js et React.",
+  },
+  {
+    id: 3,
+    icon: figmaIcon,
+    name: "CREATION D'INTERFACE FIGMA",
+    description: "Conception d’interfaces intuitives et esthétiques.",
+  },
+  {
+    id: 4,
+    icon: dataIcon,
+    name: "DATA ANALYSIS",
+    description: "Analyse de données, modélisation et prédictions avec Python.",
+  }
+])
 </script>
