@@ -60,18 +60,16 @@
                 class="hover:scale-105 transition-all ease-in-out flex justify-center items-center relative"
               >
                 <div class="svg-container">
-                  <svg class="download-icon" width="18" height="22">
-                    <path></path>
-                    <path></path>
-                  </svg>
+                  <i class="fa-solid fa-download  text-primary "></i>
                   <div class="download-loader text-white hidden"></div>
                 </div>
                 <a
-                  href="/resume.pdf"
-                  download="resume.pdf"
+                  href="/medias/cv adrien.pdf"
+                  download="cv adrien.pdf"
                   class="pl-2 text-primary"
-                  >Download resume</a
+                  >Télécharger le CV</a
                 >
+                
               </div>
             </button>
           </div>
