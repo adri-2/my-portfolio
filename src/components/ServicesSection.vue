@@ -4,20 +4,20 @@
       <h2 class="text-4xl font-bold text-white md-4">My Services</h2>
     </div>
     <div
-      class="py-8 xl:px-16 px-4 sm:py-16 grid grid-cols-2 gap-6 pt-10 sm:grid-cols-2 md:grap-10 md:pt-12 "
+      class="py-10 xl:px-16 px-4 sm:py-16 grid grid-cols-1 gap-6 pt-10 sm:grid-cols-2 md:grid-cols-2 md:pt-12 "
     >
       <div
         v-for="service in services"
         :key="service.id"
         data-aos="fade-up"
-        class="px-8 py-12 rounded-xl bg-[#111a3e] shadow-lg border border-[#1f1641]"
+        class="px-8 py-4 md:py-10 rounded-xl  flex flex-col justify-start bg-[#111a3e] shadow-lg border-2 border-primary"
       >
-        <div class="mx-auto h-24 text-center xl:h-28 xl:w-28">
-          <div>
-            <img :src="service.icon" alt="service icon" />
-          </div>
+        <div class="mx-auto h-16 text-center xl:h-28 xl:w-28 mb-16 md:mb-0">
+          <!-- <div> -->
+            <img :src="service.icon" alt="service icon" class="h-56 md:h-28 object-contain" />
+          <!-- </div> -->
         </div>
-        <div class="text-center">
+        <div class="text-center flex flex-col justify-end md:py-0 md:my-4 py-12 my-8">
           <h3
             class="pt-8 text-lg font-semibold uppercase text-transparent bg-clip-text bg-gradient-to-tr from-primary to-secondary lg:text-xl"
           >

@@ -26,17 +26,13 @@
                 Adrien </span
               >😁
             </h1>
-          </div>
+            <h2 class="pt-2 text-2xl text-transparent bg-clip-text bg-gradient-to-r from-primary to-pink-500 ">Développeur full-stack</h2>
+
+            </div>
           <p
             class="text-gray-300 pt-8 text-center  lg:text-left mx-auto max-w-xl"
           >
-            Qui suis-je ? Je suis un développeur full-stack passionné,
-            spécialisé dans la création d’applications web performantes et
-            visuellement soignées. Je combine Python (web et data), Vue.js,
-            React et Figma pour concevoir des solutions robustes et
-            ergonomiques. Mon expertise couvre également l’analyse de données et
-            le machine learning. Toujours curieux d’apprendre, j’explore aussi
-            des domaines comme la cybersécurité et l’administration système.
+           Développeur full-stack passionné, expert en Python, Vue.js et React, je conçois des applications web performantes et ergonomiques. Mon savoir-faire s’étend aussi à l’analyse de données, au machine learning, et à des domaines connexes comme la cybersécurité et l’administration système.
           </p>
           <div
             class="flex items-center gap-3 pt-9 flex-col sm:flex-row sm:w-max sm:mx-auto lg:mx-0"
