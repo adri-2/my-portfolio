@@ -1,10 +1,15 @@
 <template>
-  <div class="bg-[#111827] min-h-screen">
+  <div class="bg-[#111827] min-h-screen" >
     <NavBar />
     <HeroSection />
     <ServicesSection />
     <AboutSection />
     <ExperienceAndSkills />
+    <ProjectSection />
+   
+    <TestimonialsSection />
+     <ContactSection/>
+     <FooterSection />
   </div>
 </template>
 
@@ -24,5 +29,18 @@ const AboutSection = defineAsyncComponent(() =>
 );
 const ExperienceAndSkills = defineAsyncComponent(() =>
   import("./components/ExperienceAndSkills.vue")
+);
+
+const ProjectSection = defineAsyncComponent(() =>
+  import("./components/ProjectSection.vue")
+);
+const ContactSection = defineAsyncComponent(() =>
+  import("./components/ContactSection.vue")
+);
+const TestimonialsSection = defineAsyncComponent(() =>
+  import("./components/TestimonialsSection.vue")
+);
+const FooterSection = defineAsyncComponent(() =>
+  import("./components/FooterSection.vue")
 );
 </script>

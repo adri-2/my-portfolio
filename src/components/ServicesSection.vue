@@ -1,7 +1,11 @@
 <template>
   <section class="text-white mt-20" id="services">
     <div class="px-4 xl:pl-16">
-      <h2 class="text-4xl font-bold text-white md-4">My Services</h2>
+      <!-- <h2 class="text-4xl font-bold text-white md-4">My Services</h2> -->
+      <!-- Title -->
+    <h2 class="text-center text-4xl font-bold mb-10 text-white">
+      Mes <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">Services</span>
+    </h2>
     </div>
     <div
       class="py-10 xl:px-16 px-4 sm:py-16 grid grid-cols-1 gap-6 pt-10 sm:grid-cols-2 md:grid-cols-2 md:pt-12 "

@@ -84,18 +84,7 @@
         </span>
       </span>
 
-      <span class="flex opacity-20">
-        <span
-          class="w-16-h-332 rounded-l-full flex bg-[#f88fc2] blur-2xl mt-14"
-        >Professionnelle
-        </span>
-      </span>
-      <span class="flex opacity-20">
-        <span
-          class="w-16-h-332 rounded-l-full flex bg-[#f88fc2] blur-2xl mt-14"
-        >Professionnelle
-        </span>
-      </span>
+     
     </div>
    <!-- experience section -->
     <!-- <div data-aos="fade-up">
