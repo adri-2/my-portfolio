@@ -17,22 +17,28 @@
         <div class="lg:py-6">
           <div class="text-cnter lg:text-left">
             <h1
-              class="pt-4 text-white font-bold text-4xl md:text-5xl lg:text-6xl"
+              class="pt-4 text-white lg:text-nowrap font-bold text-3xl md:text-5xl lg:text-6xl"
             >
-              Hi, I'm
+              Salut, je suis
               <span
                 class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-pink-500"
               >
                 Adrien </span
               >😁
             </h1>
-            <h2 class="pt-2 text-2xl text-transparent bg-clip-text bg-gradient-to-r from-primary to-pink-500 ">Développeur full-stack</h2>
-
-            </div>
+          </div>
           <p
-            class="text-gray-300 pt-8 text-center  lg:text-left mx-auto max-w-xl"
+            class="text-gray-300 pt-6 text-center lg:text-left mx-auto max-w-xl"
           >
-           Développeur full-stack passionné, expert en Python, Vue.js et React, je conçois des applications web performantes et ergonomiques. Mon savoir-faire s’étend aussi à l’analyse de données, au machine learning, et à des domaines connexes comme la cybersécurité et l’administration système.
+            <span
+              class="pt-2 text-2xl text-transparent bg-clip-text bg-gradient-to-r from-primary to-pink-500"
+              >Développeur full-stack</span
+            >
+            passionné, expert en Python, Vue.js et React, je conçois des
+            applications web performantes et ergonomiques. Mon savoir-faire
+            s’étend aussi à l’analyse de données, au machine learning, et à des
+            domaines connexes comme la cybersécurité et l’administration
+            système.
           </p>
           <div
             class="flex items-center gap-3 pt-9 flex-col sm:flex-row sm:w-max sm:mx-auto lg:mx-0"
@@ -56,7 +62,7 @@
                 class="hover:scale-105 transition-all ease-in-out flex justify-center items-center relative"
               >
                 <div class="svg-container">
-                  <i class="fa-solid fa-download  text-primary "></i>
+                  <i class="fa-solid fa-download text-primary"></i>
                   <div class="download-loader text-white hidden"></div>
                 </div>
                 <a
@@ -65,24 +71,23 @@
                   class="pl-2 text-primary"
                   >Télécharger le CV</a
                 >
-                
               </div>
             </button>
           </div>
         </div>
         <!--  -->
         <div
-          class="lg:h-full md:flex lg:items-center mt-4 sm-mt-8 min-sm:mt-12"
+          class="lg:h-full lg:flex lg:justify-center lg:items-center mt-4 sm-mt-8 min-sm:mt-12"
         >
           <div
-            class="flex w-full h-full min-h-[25rem] lg:w-full lg:h-full items-end relative justify-center  "
+            class="flex w-full h-full min-h-[25rem] lg:w-full lg:h-full items-end relative justify-center"
           >
             <!-- <div
               class="absolute z-0 top-1/2 -translate-y-1/2 lg:min-h-[none] w-5/6 right-0 h-[calc(80%+20px)] bg-gradient-to-tr opacity-25 from-[#570cac] to-primary blur-2xl"
             ></div> -->
 
             <div
-              class=" h-90 w-90 z-10 p-2 -translate-y-1/2 top-1/2 lg:right-3 md:right-40 sm:right-14 rounded-full shadow-lg border border-primary flex justify-center items-end"
+              class="h-90 w-90 z-10 p-2 -translate-y-1/2 top-1/2 lg:right-3 md:right-40 sm:right-14 rounded-full shadow-lg border border-primary flex justify-center items-end"
             >
               <img
                 src="../assets/photo-user.jpg"
@@ -93,19 +98,19 @@
                 class="w-50 h-50 rounded-full object-fill"
               />
               <div
-                class="absolute -top-5 left-1/2 transform -translate-x-1/2 w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center shadow  -m-7 hover:scale-110 transition-all duration-300 ease-in-out"
+                class="absolute -top-5 left-1/2 transform -translate-x-1/2 w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center shadow -m-7 hover:scale-110 transition-all duration-300 ease-in-out"
               >
                 <i
                   class="fa-brands fa-css3-alt fa-2xl hover:text-blue-900 hover:scale-110 transition-all duration-300 ease-in-out"
                 ></i>
               </div>
               <div
-                class="absolute top-1/2 -left-5 transform -translate-y-1/2 w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center shadow  -m-7 hover:scale-110 transition-all duration-300 ease-in-out"
+                class="absolute top-1/2 -left-5 transform -translate-y-1/2 w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center shadow -m-7 hover:scale-110 transition-all duration-300 ease-in-out"
               >
                 <i class="fa-brands fa-github fa-xl"></i>
               </div>
               <div
-                class="absolute top-1/2  -right-5  transform -translate-y-1/2 w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center shadow  -m-10 hover:scale-110 transition-all duration-300 ease-in-out"
+                class="absolute top-1/2 -right-5 transform -translate-y-1/2 w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center shadow -m-10 hover:scale-110 transition-all duration-300 ease-in-out"
               >
                 <i
                   class="fa-brands fa-vuejs hover:fa-2xl fa-xl hover:text-green-700 hover:scale-110 transition-all duration-300 ease-in-out"
@@ -115,7 +120,7 @@
                 class="absolute -bottom-4 left-1/2 -right-4 transform -translate-x-1/2 w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center shadow -m-12 hover:scale-110 transition-all duration-300 ease-in-out"
               >
                 <i
-                  class="fa-brands fa-html5 fa-xl hover:fa-2xl  hover:text-orange-500"
+                  class="fa-brands fa-html5 fa-xl hover:fa-2xl hover:text-orange-500"
                 ></i>
               </div>
               <div
@@ -154,10 +159,10 @@
               </div>
 
               <div
-                class="absolute   -right-2 -top-2 transform -translate-x-1/2 w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center shadow -m-7 hover:scale-110 transition-all duration-300 ease-in-out"
+                class="absolute -right-2 -top-2 transform -translate-x-1/2 w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center shadow -m-7 hover:scale-110 transition-all duration-300 ease-in-out"
               >
                 <i
-                  class="fa-brands fa-react fa-xl  hover:text-[#1E88E5] hover:scale-110 transition-all duration-300 ease-in-out"
+                  class="fa-brands fa-react fa-xl hover:text-[#1E88E5] hover:scale-110 transition-all duration-300 ease-in-out"
                 ></i>
               </div>
             </div>
@@ -171,8 +176,6 @@
 <script setup>
 import AOS from "aos";
 import "aos/dist/aos.css";
-
-
 
 AOS.init();
 </script>

@@ -61,12 +61,13 @@
 import { ref } from "vue";
 
 const Menu = ref([
-  { name: "Services", href: "#services" },
-  { name: "About Me", href: "#about" },
-  { name: "Skills", href: "#skills" },
-  { name: "Projects", href: "#projects" },
-  { name: "Testimonials", href: "#testimonials" },
-  { name: "Contact", href: "#contact" },
+{ name: "Services", href: "#services" },        // Mes Services
+{ name: "À propos", href: "#about" },           // À propos de moi
+{ name: "Compétences", href: "#skills" },       // Mes Compétences
+{ name: "Projets", href: "#projects" },         // Réalisations
+{ name: "Témoignages", href: "#testimonials" }, // Avis & Témoignages
+{ name: "Contact", href: "#contact" },          // Me Contacter
+
 ]);
 
 const isMenuOpen = ref(false);

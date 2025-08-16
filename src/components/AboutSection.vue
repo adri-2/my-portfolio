@@ -8,14 +8,21 @@
     <div
       class="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16 z-1"
     >
-      <div  class="mt-4 md:mt-0 text-left flex flex-col z-10 h-full" data-aos="flip-right">
+      <div
+        class="mt-4 md:mt-0 text-left flex flex-col z-10 h-full"
+        data-aos="flip-right"
+      >
         <!-- <h2 class="text-4xl font-bold text-white text-left mb-8">
           My Education
         </h2> -->
         <!-- Title -->
-    <h2 class="text-center text-4xl font-bold mb-10 text-white">
-       Parcours  <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">Scolaire </span>
-    </h2>
+        <h2 class="text-center text-4xl font-bold mb-10 text-white">
+          Parcours
+          <span
+            class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary"
+            >Scolaire
+          </span>
+        </h2>
         <div class="space-y-8 py-8">
           <div
             v-for="element in education"
@@ -45,11 +52,11 @@
         data-aos="flip-right"
       >
         <h2 class="text-4xl font-bold text-white md:text-center text-left md-4">
-          En savoir 
+          En savoir
           <span
             class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary"
-            >Plus sur </span
-          >
+            >Plus sur
+          </span>
           Moi
         </h2>
         <p class="text-base lg:text-lg mt-8 py-8">
@@ -93,9 +100,9 @@ const education = ref([
 ]);
 
 const box_infors = ref([
-  { h: "+4", p: "Happy client" },
-  { h: "3", p: "Years" },
-  { h: "10", p: "Porjets" },
+  { h: "+4", p: "Clients" },
+  { h: "3", p: "Ans" },
+  { h: "10", p: "Projets" },
   { h: "10", p: "Certifications" },
 ]);
 </script>

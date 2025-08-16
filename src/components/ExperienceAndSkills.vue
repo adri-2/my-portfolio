@@ -1,48 +1,46 @@
 <template>
   <section class="text-white mt-18 pb-10 grid grid-cols-1" id="skills">
-    <div class=" py-4 xl:px-16 ">
+    <div class="py-4 xl:px-16">
       <div class="mt-4 md:mt-0 text-left flex flex-col z-10 h-full w-full">
         <h2 class="text-4xl font-bold text-white text-left mb-4">
-          My
-          <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
-            Skills
+          Mes
+          <span
+            class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary"
+          >
+            Compétences
           </span>
         </h2>
-        <div class="mt-8 grid grid-cols-1 md:grid-cols-2  gap-x-4 gap-y-6 ">
+        <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-6">
           <div
             v-for="(category, key) in skills"
             :key="key"
             data-aos="fade-right"
-            class="bg-[#111A3E] rounded-xl  shadow-lg  p-4 border-2 border-primary"
+            class="bg-[#111A3E] rounded-xl shadow-lg p-4 border-2 border-primary"
           >
-            <div class="flex gap-x-4 items-center mb-4 "
-            data-aos="fade-right">
-              <div class="rounded-full bg-blue-500 p-4 w-12 h-12 flex items-center justify-center"
-              data-aos="fade-right">
-                <i
-                  v-if="key === 'languages'"
-                  class="fa-solid fa-code"
-                ></i>
+            <div class="flex gap-x-4 items-center mb-4" data-aos="fade-right">
+              <div
+                class="rounded-full bg-blue-500 p-4 w-12 h-12 flex items-center justify-center"
+                data-aos="fade-right"
+              >
+                <i v-if="key === 'languages'" class="fa-solid fa-code"></i>
                 <i
                   v-else-if="key === 'frontend'"
                   class="fa-solid fa-desktop"
                 ></i>
-                <i
-                  v-else-if="key === 'backend'"
-                  class="fa-solid fa-server"
-                ></i>
-                <i
-                  v-else-if="key === 'tools'"
-                  class="fa-solid fa-toolbox"
-                ></i>
+                <i v-else-if="key === 'backend'" class="fa-solid fa-server"></i>
+                <i v-else-if="key === 'tools'" class="fa-solid fa-toolbox"></i>
               </div>
               <h1 class="text-xl font-bold">
                 {{
-                  key === 'languages' ? 'Programming Languages'
-                  : key === 'frontend' ? 'Frontend'
-                  : key === 'backend' ? 'Backend'
-                  : key === 'tools' ? 'Tools'
-                  : key
+                  key === "languages"
+                    ? "Languages de Programmation"
+                    : key === "frontend"
+                    ? "Frontend"
+                    : key === "backend"
+                    ? "Backend"
+                    : key === "tools"
+                    ? "Outils"
+                    : key
                 }}
               </h1>
             </div>
@@ -53,10 +51,17 @@
                 class="flex items-center"
                 data-aos="fade-right"
               >
-                <div class="flex flex-row items-center gap-x-4 w-96 h-16 border-2 border-[#1f1641] rounded-lg p-2 bg-gradient-to-r from-primary to-secondary"
+                <div
+                  class="flex flex-row items-center gap-x-4 w-96 h-16 border-2 border-[#1f1641] rounded-lg p-2 bg-gradient-to-r from-primary to-secondary"
                 >
-                  <img :src="skill.icon" alt="" class="w-8 h-8 object-contain" />
-                  <span class="text-white font-medium text-md text-nowrap ">{{ skill.name }}</span>
+                  <img
+                    :src="skill.icon"
+                    alt=""
+                    class="w-8 h-8 object-contain"
+                  />
+                  <span class="text-white font-medium text-md text-nowrap">{{
+                    skill.name
+                  }}</span>
                 </div>
               </div>
             </div>
@@ -74,66 +79,75 @@
       -->
     </div>
 
-  <div class="absolute right-0 top-[110rem] h-full w-full justify-end">
+    <div class="absolute right-0 top-[110rem] h-full w-full justify-end">
       <span class="flex opacity-20">
-        <span class="w-16-h-332 rounded-l-full flex bg-primary blur-2xl">Experience </span>
-       
-        <span
-          class="w-16-h-332 rounded-l-full flex bg-[#f88fc2] blur-2xl mt-14"
-        >Professionnelle
+        <span class="w-16-h-332 rounded-l-full flex bg-primary blur-2xl"
+          >Experience
+        </span>
+
+        <span class="w-16-h-332 rounded-l-full flex bg-[#f88fc2] blur-2xl mt-14"
+          >Professionnelle
         </span>
       </span>
-
-     
     </div>
-   <!-- experience section -->
+    <!-- experience section -->
     <!-- <div data-aos="fade-up">
       <h2 class="text-4xl font-bold text-white text-left md:text-center md:mt-0 mt-8">Experience professionnelle </h2>
       <div v-for="element in Epe"></div>
     </div> -->
   </section>
   <section class="py-16" id="experience" data-aos="fade-up">
-   <div class="max-w-6xl mx-auto px-6">
-    <!-- Titre -->
-    <h2 class="text-4xl font-bold text-center mb-12 text-white">
-      Expérience <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">Professionnelle</span>
-    </h2>
+    <div class="max-w-6xl mx-auto px-6">
+      <!-- Titre -->
+      <h2 class="text-4xl font-bold text-center mb-12 text-white">
+        Expérience
+        <span
+          class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary"
+          >Professionnelle</span
+        >
+      </h2>
 
-    <!-- Liste des expériences -->
-    <div class="relative border-l-4 border-primary">
-      <div
-       v-for="exp in experiences"
-       :key="exp.id"
-       class="mb-10 ml-6 relative group"
-       data-aos="fade-up"
-      >
-       <!-- Point sur la ligne -->
-       <span class="absolute -left-3 top-1 w-6 h-6 bg-primary rounded-full border-4 border-[#111A3E]"></span>
-
-       <!-- Carte -->
-       <div class="bg-[#111A3E] p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-[#1f1641]">
-        <h3 class="text-xl font-semibold text-white">{{ exp.title }}</h3>
-        <p class="text-sm text-gray-400 mb-2">{{ exp.company }} • {{ exp.period }}</p>
-        <p class="text-gray-300">{{ exp.description }}</p>
-
-        <!-- Compétences -->
-        <div class="flex flex-wrap gap-2 mt-4">
+      <!-- Liste des expériences -->
+      <div class="relative border-l-4 border-primary">
+        <div
+          v-for="exp in experiences"
+          :key="exp.id"
+          class="mb-10 ml-6 relative group"
+          data-aos="fade-up"
+        >
+          <!-- Point sur la ligne -->
           <span
-           v-for="skill in exp.skills"
-           :key="skill"
-           class="px-3 py-1 text-sm bg-gradient-to-r from-primary to-secondary text-white rounded-full"
+            class="absolute -left-3 top-1 w-6 h-6 bg-primary rounded-full border-4 border-[#111A3E]"
+          ></span>
+
+          <!-- Carte -->
+          <div
+            class="bg-[#111A3E] p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-[#1f1641]"
           >
-           {{ skill }}
-          </span>
+            <h3 class="text-xl font-semibold text-white">{{ exp.title }}</h3>
+            <p class="text-sm text-gray-400 mb-2">
+              {{ exp.company }} • {{ exp.period }}
+            </p>
+            <p class="text-gray-300">{{ exp.description }}</p>
+
+            <!-- Compétences -->
+            <div class="flex flex-wrap gap-2 mt-4">
+              <span
+                v-for="skill in exp.skills"
+                :key="skill"
+                class="px-3 py-1 text-sm bg-gradient-to-r from-primary to-secondary text-white rounded-full"
+              >
+                {{ skill }}
+              </span>
+            </div>
+          </div>
         </div>
-       </div>
       </div>
     </div>
-   </div>
   </section>
 
   <!-- <section> -->
-    <!-- <p>expressIcon</p> -->
+  <!-- <p>expressIcon</p> -->
   <!-- </section> -->
 </template>
 
@@ -175,7 +189,7 @@ const skills = ref({
     { id: 4, name: "SQL", icon: sqlIcon },
     { id: 5, name: "MYSQL", icon: mysqlIcon },
     { id: 6, name: "POSTGRESQL", icon: postgresIcon },
-    { id: 21, name: "MONGODB", icon: mongoIcon }
+    { id: 21, name: "MONGODB", icon: mongoIcon },
   ],
   frontend: [
     { id: 7, name: "VUE JS", icon: vueIcon },
@@ -198,7 +212,7 @@ const skills = ref({
     { id: 18, name: "FIGMA", icon: figmaIcon },
     { id: 19, name: "LINUX", icon: linuxIcon },
     { id: 20, name: "DOCKER", icon: dockerIcon },
-    { id: 22, name: "POWER BI", icon: powerBiIcon }
+    { id: 22, name: "POWER BI", icon: powerBiIcon },
   ],
 });
 
@@ -208,30 +222,30 @@ const experiences = ref([
     title: "Développeur Backend",
     company: "TechCorp",
     period: "2023 - Présent",
-    description: "Développement d’API REST avec Django et optimisation des performances backend.",
-    skills: ["Python", "Django", "PostgreSQL"]
+    description:
+      "Développement d’API REST avec Django et optimisation des performances backend.",
+    skills: ["Python", "Django", "PostgreSQL"],
   },
   {
     id: 2,
     title: "Développeur Frontend",
     company: "Creative Web Studio",
     period: "2022 - 2023",
-    description: "Création d’interfaces utilisateur réactives et modernes avec Vue.js et TailwindCSS.",
-    skills: ["Vue.js", "TailwindCSS", "Figma"]
+    description:
+      "Création d’interfaces utilisateur réactives et modernes avec Vue.js et TailwindCSS.",
+    skills: ["Vue.js", "TailwindCSS", "Figma"],
   },
   {
     id: 3,
     title: "Data Analyst",
     company: "Data Insights",
     period: "2021 - 2022",
-    description: "Analyse et visualisation de données pour la prise de décision stratégique.",
-    skills: ["Python", "Pandas", "Power BI"]
-  }
+    description:
+      "Analyse et visualisation de données pour la prise de décision stratégique.",
+    skills: ["Python", "Pandas", "Power BI"],
+  },
 ]);
 </script>
-
-
-
 
 <!-- <script setup>
 import { ref } from "vue";
