@@ -33,7 +33,7 @@
               <h1 class="text-xl font-bold">
                 {{
                   key === "languages"
-                    ? "Languages de Programmation"
+                    ? "Langages de Programmation"
                     : key === "frontend"
                     ? "Frontend"
                     : key === "backend"
@@ -52,62 +52,46 @@
                 data-aos="fade-right"
               >
                 <div
-                  class="flex flex-row items-center gap-x-4 w-96 h-16 border-2 border-[#1f1641] rounded-lg p-2 bg-gradient-to-r from-primary to-secondary"
+                  class="flex flex-row items-center gap-x-4 w-full h-16 border-2 border-[#1f1641] rounded-lg p-2 bg-gradient-to-r from-primary to-secondary"
                 >
                   <img
                     :src="skill.icon"
                     alt=""
                     class="w-8 h-8 object-contain"
                   />
-                  <span class="text-white font-medium text-md text-nowrap">{{
-                    skill.name
-                  }}</span>
+                  <span class="text-white font-medium text-md text-nowrap">
+                    {{ skill.name }}
+                  </span>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <!-- Experience section placeholder -->
-      <!--
-      <div data-aos="flip-left">
-        <h2 class="text-4xl font-bold text-white text-left md:text-center mt-8">
-          My Experiences
-        </h2>
-        <div class=""></div>
-      </div>
-      -->
     </div>
 
-    <div class="absolute right-0 top-[110rem] h-full w-full justify-end">
+    <div
+      class="absolute right-0 top-[110rem] h-full w-full justify-end pointer-events-none"
+    >
       <span class="flex opacity-20">
-        <span class="w-16-h-332 rounded-l-full flex bg-primary blur-2xl"
-          >Experience
-        </span>
-
-        <span class="w-16-h-332 rounded-l-full flex bg-[#f88fc2] blur-2xl mt-14"
-          >Professionnelle
-        </span>
+        <span class="w-16 h-80 rounded-l-full flex bg-primary blur-2xl"></span>
+        <span
+          class="w-16 h-80 rounded-l-full flex bg-[#f88fc2] blur-2xl mt-14"
+        ></span>
       </span>
     </div>
-    <!-- experience section -->
-    <!-- <div data-aos="fade-up">
-      <h2 class="text-4xl font-bold text-white text-left md:text-center md:mt-0 mt-8">Experience professionnelle </h2>
-      <div v-for="element in Epe"></div>
-    </div> -->
   </section>
+
   <section class="py-16" id="experience" data-aos="fade-up">
     <div class="max-w-6xl mx-auto px-6">
-      <!-- Titre -->
       <h2 class="text-4xl font-bold text-center mb-12 text-white">
         Expérience
         <span
           class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary"
-          >Professionnelle</span
         >
+          Professionnelle
+        </span>
       </h2>
-
-      <!-- Liste des expériences -->
       <div class="relative border-l-4 border-primary">
         <div
           v-for="exp in experiences"
@@ -115,12 +99,9 @@
           class="mb-10 ml-6 relative group"
           data-aos="fade-up"
         >
-          <!-- Point sur la ligne -->
           <span
             class="absolute -left-3 top-1 w-6 h-6 bg-primary rounded-full border-4 border-[#111A3E]"
           ></span>
-
-          <!-- Carte -->
           <div
             class="bg-[#111A3E] p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-[#1f1641]"
           >
@@ -129,26 +110,26 @@
               {{ exp.company }} • {{ exp.period }}
             </p>
             <p class="text-gray-300">{{ exp.description }}</p>
-
-            <!-- Compétences -->
             <div class="flex flex-wrap gap-2 mt-4">
-              <span
-                v-for="skill in exp.skills"
-                :key="skill"
-                class="px-3 py-1 text-sm bg-gradient-to-r from-primary to-secondary text-white rounded-full"
-              >
-                {{ skill }}
-              </span>
+              <template v-for="(skill, idx) in exp.skills" :key="skill">
+                <span
+                  class="flex items-center px-3 py-1 text-sm bg-gradient-to-r from-primary to-secondary text-white rounded-full"
+                >
+                  <img
+                    v-if="exp.skillsIcons[idx]"
+                    :src="exp.skillsIcons[idx]"
+                    class="inline-block w-4 h-4 mr-1"
+                    alt=""
+                  />
+                  {{ skill }}
+                </span>
+              </template>
             </div>
           </div>
         </div>
       </div>
     </div>
   </section>
-
-  <!-- <section> -->
-  <!-- <p>expressIcon</p> -->
-  <!-- </section> -->
 </template>
 
 <script setup>
@@ -181,6 +162,9 @@ import figmaIcon from "@/assets/icons8-figma.svg";
 import linuxIcon from "@/assets/icons8-linux-48.png";
 import dockerIcon from "@/assets/icons8-logo-docker.svg";
 import powerBiIcon from "@/assets/icons8-puissance-bi-2021.svg";
+import odooIcon from "@/assets/logo-odoo.png";
+
+// import pandasIcon from "@/assets/icons8-pandas.svg"; // Ajouté pour Data Analyst
 
 const skills = ref({
   languages: [
@@ -212,7 +196,7 @@ const skills = ref({
     { id: 18, name: "FIGMA", icon: figmaIcon },
     { id: 19, name: "LINUX", icon: linuxIcon },
     { id: 20, name: "DOCKER", icon: dockerIcon },
-    { id: 22, name: "POWER BI", icon: powerBiIcon },
+    { id: 23, name: "POWER BI", icon: powerBiIcon },
   ],
 });
 
@@ -220,68 +204,51 @@ const experiences = ref([
   {
     id: 1,
     title: "Développeur Backend",
-    company: "TechCorp",
-    period: "2023 - Présent",
+    company: "Innovations-Groups",
+    period: "03-2024 - 07-2024",
     description:
-      "Développement d’API REST avec Django et optimisation des performances backend.",
-    skills: ["Python", "Django", "PostgreSQL"],
+      "Développement d'une plateforme(INNO TIME) de gestion de paie des employés avec Django et optimisation des performances backend.",
+    skills: ["Python", "Django", "PostgreSQL", "HTML & CSS", "Git"],
+    skillsIcons: [pythonIcon, djangoIcon, postgresIcon, htmlIcon, gitIcon],
   },
   {
     id: 2,
-    title: "Développeur Frontend",
-    company: "Creative Web Studio",
-    period: "2022 - 2023",
+    title: "Développeur Odoo",
+    company: "Innovations-Groups",
+    period: "12-2024 - 01-2025",
     description:
-      "Création d’interfaces utilisateur réactives et modernes avec Vue.js et TailwindCSS.",
-    skills: ["Vue.js", "TailwindCSS", "Figma"],
+      "Creation et Documentation de modules Odoo pour la gestion des pharmacies, et une pour la gestion d'un laboratoire d'analyses médicales.",
+    skills: ["Python", "Odoo", "PostgreSQL", "HTML & CSS", "Javascript"],
+    skillsIcons: [pythonIcon, odooIcon, postgresIcon, htmlIcon, jsIcon],
   },
   {
     id: 3,
-    title: "Data Analyst",
-    company: "Data Insights",
-    period: "2021 - 2022",
+    title: "Développeur Backend",
+    company: "Innovations-Groups",
+    period: "01-2024 - 02-2025",
+    description: "Mise a jour d'un de la plateforme INNO TIME ",
+    skills: ["Python", "Django", "PostgreSQL", "HTML & CSS", "Git"],
+    skillsIcons: [pythonIcon, djangoIcon, postgresIcon, htmlIcon, gitIcon],
+  },
+  {
+    id: 4,
+    title: "Développeur WordPress",
+    company: "Innovations-Groups",
+    period: "02-2024 - 03-2025",
     description:
-      "Analyse et visualisation de données pour la prise de décision stratégique.",
-    skills: ["Python", "Pandas", "Power BI"],
+      "Conception d'une maquette figma et réalisation d'un site de location de voiture avec wordpress.",
+    skills: ["WordPress", "Figma", "HTML & CSS", "Canva"],
+    skillsIcons: [wordpressIcon, figmaIcon, htmlIcon, canvaIcon],
+  },
+  {
+    id: 4,
+    title: "Développeur Full Stack",
+    company: "Student's Mag",
+    period: "02-2024 - 03-2025",
+    description:
+      "Migration d'un site wifix vers React js et creation de l'api pour l'aider a l'obtention de bourses pour l'etudiant qui veulent etudier a l'etranger.",
+    skills: ["React", "Node.js", "Python", "PostgreSQL", "Git"],
+    skillsIcons: [reactIcon, nodeIcon, pythonIcon, postgresIcon, gitIcon],
   },
 ]);
 </script>
-
-<!-- <script setup>
-import { ref } from "vue";
-const skills = ref({
-  languages: [
-    { id: 1, name: "PYTHON", icon: "src/assets/icons8-python.svg" },
-    // { id: 2, name: "HTML & CSS", icon: "src/assets/icons8-html-5.svg" },
-    { id: 3, name: "TAILWIND CSS", icon: "src/assets/icons8-tailwind-css.svg" },
-    { id: 4, name: "SQL", icon: "src/assets/icons8-sql-48.png" },
-    { id: 5, name: "MYSQL", icon: "src/assets/icons8-logo-de-mysql.svg" },
-    { id: 6, name: "POSTGRESQL", icon: "src/assets/icons8-postgresql.svg" },
-    { id: 21, name: "MONGODB", icon: "src/assets/icons8-mongo-db-48.png" }
-  ],
-  frontend: [
-    { id: 7, name: "VUE JS", icon: "src/assets/icons8-vue-js.svg" },
-    { id: 8, name: "REACT JS", icon: "src/assets/icons8-react-native.svg" },
-    { id: 9, name: "HTML", icon: "src/assets/icons8-html-5.svg" },
-    { id: 10, name: "CSS", icon: "src/assets/icons8-logo-css.svg" },
-    { id: 11, name: "JAVASCRIPT", icon: "src/assets/icons8-javascript.svg" },
-  ],
-  backend: [
-    { id: 12, name: "DJANGO", icon: "src/assets/icons8-django.svg" },
-  
-    { id: 14, name: "WORDPRESS", icon: "src/assets/icons8-wordpress.svg" },
-    { id: 15, name: "NODE JS", icon: "src/assets/icons8-nodejs.svg" },
-    { id: 16, name: "EXPRESS JS", icon: "src/assets/icons8-express-js.svg" },
-    
-  ],
-  tools: [
-    { id: 15, name: "GITHUB", icon: "src/assets/icons8-logo-github.svg" },
-    { id: 16, name: "GIT", icon: "src/assets/icons8-git.svg" },
-    { id: 22, name: "POSTMAN", icon: "src/assets/postman-icon.svg" },
-    { id: 17, name: "CANVA", icon: "src/assets/icons8-toile.svg" },
-    { id: 18, name: "FIGMA", icon: "src/assets/icons8-figma.svg" },
-    { id: 19, name: "LINUX", icon: "src/assets/icons8-linux-48.png" },
-    { id: 20, name: "DOCKER", icon: "src/assets/icons8-logo-docker.svg" },
-  ],
-});
-</script> -->

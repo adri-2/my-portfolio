@@ -1,30 +1,30 @@
 <template>
   <section
-    class="min-h-screen py-16 px-4 flex flex-col items-center justify-center"
+    class="min-h-[500px] md:min-h-screen sm:min-h-44 py-16 px-4 flex flex-col items-center justify-center"
   >
     <!-- Titre -->
-    <h2 class="text-4xl md:text-5xl font-bold text-center mb-12 text-white">
+    <!-- <h2 class="text-4xl md:text-5xl font-bold text-center mb-12 text-white">
       Mes
       <span
         class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary"
       >
         Certifications
       </span>
-    </h2>
+    </h2> -->
 
     <!-- Carousel -->
     <div class="relative w-full max-w-2xl mx-auto">
       <!-- Bouton gauche -->
-      <button
+      <!-- <button
         @click="prev"
         aria-label="Certification précédente"
         class="absolute left-0 top-1/2 -translate-y-1/2 w-10 h-10 flex justify-center items-center bg-primary text-white rounded-full p-3 shadow-lg hover:scale-110 transition z-10"
       >
         <i class="fa-solid fa-chevron-left"></i>
-      </button>
+      </button> -->
 
       <!-- Slide -->
-      <div
+      <!-- <div
         class="overflow-hidden rounded-xl shadow-xl bg-[#1f1641] flex items-center justify-center h-80 sm:h-96 md:h-[28rem]"
       >
         <transition name="fade" mode="out-in">
@@ -48,20 +48,20 @@
             }}</span>
           </div>
         </transition>
-      </div>
+      </div> -->
 
       <!-- Bouton droit -->
-      <button
+      <!-- <button
         @click="next"
         aria-label="Certification suivante"
         class="absolute right-0 top-1/2 -translate-y-1/2 w-10 h-10 flex justify-center items-center bg-secondary text-white rounded-full p-3 shadow-lg hover:scale-110 transition z-10"
       >
         <i class="fa-solid fa-chevron-right"></i>
-      </button>
+      </button> -->
     </div>
 
     <!-- Dots -->
-    <div class="flex gap-2 justify-center mt-8">
+    <!-- <div class="flex gap-2 justify-center mt-8">
       <span
         v-for="(cert, idx) in certifications"
         :key="idx"
@@ -74,7 +74,7 @@
         ]"
       >
       </span>
-    </div>
+    </div> -->
   </section>
 </template>
 

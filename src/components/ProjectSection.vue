@@ -1,11 +1,17 @@
 <template>
-  <section id="projects" class="relative w-[95%] px-4 md:px-16 mx-auto py-16 md:py-24">
-    
+  <section
+    id="projects"
+    class="relative w-[95%] px-4 md:px-16 mx-auto py-16 md:py-24"
+  >
     <h2 class="text-4xl font-bold text-center mb-12 text-white">
-      <span class="inline-block mb-2">Mes</span> <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">Projets</span>
+      <span class="inline-block mb-2">Mes</span>
+      <span
+        class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary"
+        >Projets</span
+      >
     </h2>
 
-    <div class="relative ">
+    <div class="relative">
       <button
         class="swiper-button-prev absolute top-1/2 left-[-1rem] md:left-[-2rem] transform -translate-y-1/2 z-10 bg-primary bg-opacity-75 hover:bg-yellow-600 text-white p-3 md:p-4 shadow-lg rounded-full transition-all duration-300"
         aria-label="Previous Project"
@@ -71,68 +77,88 @@ import image2 from "@/assets/image (2).png";
 
 const navigationOptions = {
   nextEl: ".swiper-button-next",
-  prevEl: ".swiper-button-prev"
+  prevEl: ".swiper-button-prev",
 };
 
 const swiperModules = [EffectCoverflow, Navigation, Pagination];
 
 const projects = ref([
   {
-    title: "E-commerce Platform",
-    description: "A fully functional e-commerce platform with user authentication, product catalog, shopping cart, and checkout process.",
+    title: "Advisers Agency",
+    description:
+      "Plateforme pour les élèves et étudiants à la recherche de bourses.",
     image: image1,
-    tags: ["Vue.js", "Vuex", "Node.js", "Express", "MongoDB"],
-    liveLink: "https://ecommerce-example.com",
-    codeLink: "https://github.com/user/ecommerce-platform"
+    tags: [
+      "React.js",
+      "Python",
+      "Django",
+      "Django Rest Framework",
+      "PostgreSQL",
+    ],
+    liveLink: "",
+    codeLink: "https://github.com/adri-2/advisers-agency-view.git",
   },
   {
-    title: "Task Management App",
-    description: "A collaborative task management application allowing users to create, assign, and track tasks in real-time.",
+    title: "CRM Recrutement Backend",
+    description:
+      "API backend pour un CRM, gestion des utilisateurs et des projets.",
     image: image2,
-    tags: ["React", "Redux", "Firebase", "Styled Components"],
-    liveLink: "https://task-manager-app.net",
-    codeLink: "https://github.com/user/task-management-app"
+    tags: ["Django", "Django Rest Framework", "PostgreSQL"],
+    liveLink: "",
+    codeLink: "https://github.com/adri-2/crm-projet-backemd.git",
   },
   {
-    title: "E-commerce Platform",
-    description: "A fully functional e-commerce platform with user authentication, product catalog, shopping cart, and checkout process.",
+    title: "CRM Recrutement  Frontend",
+    description:
+      "Frontend d'un CRM pour la gestion des clients et des projets.",
     image: image1,
-    tags: ["Vue.js", "Vuex", "Node.js", "Express", "MongoDB"],
-    liveLink: "https://ecommerce-example.com",
-    codeLink: "https://github.com/user/ecommerce-platform"
+    tags: ["Vue.js", "TailwindCSS"],
+    liveLink: "",
+    codeLink: "https://github.com/adri-2/crm-project.git",
   },
   {
-    title: "Task Management App",
-    description: "A collaborative task management application allowing users to create, assign, and track tasks in real-time.",
+    title: "Portfolio",
+    description:
+      "Mon portfolio personnel développé avec Vue.js et TailwindCSS.",
     image: image2,
-    tags: ["React", "Redux", "Firebase", "Styled Components"],
-    liveLink: "https://task-manager-app.net",
-    codeLink: "https://github.com/user/task-management-app"
+    tags: ["Vue.js", "TailwindCSS"],
+    liveLink: "",
+    codeLink: "https://github.com/adri-2/my-portfolio.git",
   },
   {
-    title: "E-commerce Platform",
-    description: "A fully functional e-commerce platform with user authentication, product catalog, shopping cart, and checkout process.",
+    title: "Simu API",
+    description: "API de simulation pour différents scénarios métiers.",
     image: image1,
-    tags: ["Vue.js", "Vuex", "Node.js", "Express", "MongoDB"],
-    liveLink: "https://ecommerce-example.com",
-    codeLink: "https://github.com/user/ecommerce-platform"
+    tags: ["Django", "Django Rest Framework", "PostgreSQL"],
+    liveLink: "",
+    codeLink: "https://github.com/adri-2/simu-api.git",
   },
   {
-    title: "Task Management App",
-    description: "A collaborative task management application allowing users to create, assign, and track tasks in real-time.",
+    title: "Gestion Location de Livres",
+    description: "Projet Django pour la gestion de location des livres.",
     image: image2,
-    tags: ["React", "Redux", "Firebase", "Styled Components"],
-    liveLink: "https://task-manager-app.net",
-    codeLink: "https://github.com/user/task-management-app"
+    tags: ["Django", "Django Rest Framework", "PostgreSQL"],
+    liveLink: "",
+    codeLink: "https://github.com/adri-2/gestion-location-livres.git",
   },
-  // {
-  //   title: "Portfolio Website",
-  //   description: "A personal portfolio website to showcase projects, skills, and experience.",
-  //   image: image3,
-  //   tags: ["Nuxt.js", "Tailwind CSS", "Netlify"],
-  //   liveLink: "https://my-portfolio.online",
-  //   codeLink: "https://github.com/user/portfolio-website"
-  // }
+  {
+    title: "MangaLib",
+    description:
+      "Bibliothèque en ligne pour la gestion et la lecture de mangas.",
+    image: image1,
+    tags: ["Vue.js", "Django", "Django Rest Framework", "PostgreSQL"],
+    liveLink: "",
+    codeLink: "https://github.com/adri-2/mangalib.git",
+  },
+  {
+    title: "WeatherApp API",
+    description:
+      "API météo pour récupérer les données climatiques en temps réel.",
+    image: image2,
+    tags: ["Django", "Django Rest Framework", "PostgreSQL"],
+    liveLink: "",
+    codeLink: "https://github.com/adri-2/weatherapp-api.git",
+  },
 ]);
 </script>
 

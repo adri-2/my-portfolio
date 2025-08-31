@@ -1,5 +1,5 @@
 <template>
-  <section class="mt-16 text-white p-4" id="contact">
+  <section class="mt-16 text-white p-4 pb-32 min-h-screen" id="contact">
     <div
       class="max-w-5xl mx-auto bg-[#10172a] rounded-3xl shadow-xl p-8 xl:p-16 relative overflow-hidden border-2 border-primary"
     >
@@ -46,7 +46,7 @@
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <p class="text-[#adb7be]">(237) 6788846493</p>
+                  <p class="text-[#adb7be]">(+237) 678846493</p>
                 </a>
               </div>
             </div>
@@ -64,10 +64,10 @@
                 <h4 class="font-semibold text-lg">LinkedIn</h4>
                 <p>
                   <a
-                    href="https://linkedin.com/in/yourprofile"
+                    href="https://www.linkedin.com/in/adrien-sani-2890312aa"
                     target="_blank"
                     class="underline text-[#adb7be] hover:text-white transition"
-                    >linkedin.com/in/yourprofile</a
+                    >linkedin.com/in/adrien-sani</a
                   >
                 </p>
               </div>
@@ -106,24 +106,29 @@
             class="absolute bottom-0 left-0 w-1/2 h-2 border-b-2 border-l-2 border-secondary rounded-bl-xl"
           ></span>
           <form
+            @submit.prevent="sendEmail"
             class="flex flex-col gap-6 bg-[#0f172a] rounded-2xl p-8 shadow-lg"
           >
             <div>
               <label class="block text-[#adb7be] mb-2" for="name">Nom</label>
               <input
+                v-model="form.name"
                 id="name"
                 type="text"
                 class="w-full p-3 rounded-lg bg-[#1e293b] text-white border border-[#233876] focus:outline-none focus:ring-2 focus:ring-[#233876]"
                 placeholder="Votre Nom"
+                required
               />
             </div>
             <div>
               <label class="block text-[#adb7be] mb-2" for="email">Email</label>
               <input
+                v-model="form.email"
                 id="email"
                 type="email"
                 class="w-full p-3 rounded-lg bg-[#1e293b] text-white border border-[#233876] focus:outline-none focus:ring-2 focus:ring-[#233876]"
                 placeholder="Votre Email"
+                required
               />
             </div>
             <div>
@@ -131,17 +136,19 @@
                 >Message</label
               >
               <textarea
+                v-model="form.message"
                 id="message"
                 rows="4"
                 class="w-full p-3 rounded-lg bg-[#1e293b] text-white border border-[#233876] focus:outline-none focus:ring-2 focus:ring-[#233876]"
                 placeholder="Votre Message"
+                required
               ></textarea>
             </div>
             <button
               type="submit"
               class="bg-gradient-to-r from-[#233876] to-[#111a3e] text-white font-semibold py-3 rounded-lg hover:scale-105 transition"
             >
-              Envoyer le Message
+              {{ sending ? "Envoi..." : "Envoyer le Message" }}
             </button>
           </form>
         </div>
@@ -151,5 +158,50 @@
 </template>
 
 <script setup>
-// No script logic for static UI/UX demo
+import { ref } from "vue";
+import emailjs from "@emailjs/browser";
+
+const form = ref({
+  name: "",
+  email: "",
+  subject: "",
+  message: "",
+});
+
+const sending = ref(false);
+const success = ref(false);
+const error = ref("");
+
+// Formulaire ref
+const formRef = ref(null);
+
+function sendEmail() {
+  sending.value = true;
+  success.value = false;
+  error.value = "";
+
+  emailjs
+
+    .send(
+      "service_4rfukca", // ton service ID
+      "template_pkia8td", // ton template ID
+      {
+        from_name: form.value.name,
+        from_email: form.value.email,
+        subject: form.value.subject,
+        message: form.value.message,
+      },
+      "_S-KWFa-THi1E5DQ5" // ta clé publique
+    )
+    .then(() => {
+      success.value = true;
+      sending.value = false;
+      form.value = { name: "", email: "", subject: "", message: "" };
+    })
+    .catch((err) => {
+      console.error(err);
+      error.value = "Erreur lors de l’envoi. Vérifie tes IDs EmailJS.";
+      sending.value = false;
+    });
+}
 </script>

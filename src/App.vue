@@ -9,7 +9,7 @@
 
     <TestimonialsSection />
     <ContactSection />
-    <CertificationsPage />
+    <!-- <CertificationsPage /> -->
     <FooterSection />
   </div>
 </template>

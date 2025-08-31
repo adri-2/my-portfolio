@@ -87,10 +87,10 @@
             ></div> -->
 
             <div
-              class="h-90 w-90 z-10 p-2 -translate-y-1/2 top-1/2 lg:right-3 md:right-40 sm:right-14 rounded-full shadow-lg border border-primary flex justify-center items-end"
+              class="h-90 w-90 z-10 p-2 -translate-y-1/2 top-1/2 lg:right-3 md:right-40 sm:right-14 rounded-full shadow-lg border-8 border-primary flex justify-center items-end"
             >
               <img
-                src="../assets/photo-user.jpg"
+                src="/public/profile.png"
                 alt=""
                 width="250"
                 height="250"
