@@ -52,27 +52,35 @@
       <!-- Réseaux sociaux -->
       <div class="flex gap-5">
         <a
-          href="https://github.com/"
+          href="https://github.com/adri-2"
           target="_blank"
           aria-label="GitHub"
-          class="hover:text-secondary transition-transform transform hover:scale-110"
+          class="hover:text-primary transition-transform transform hover:scale-110"
         >
           <i class="fa-brands fa-github text-2xl"></i>
         </a>
         <a
-          href="https://linkedin.com/"
+          href="https://www.linkedin.com/in/adrien-sani-2890312aa"
           target="_blank"
           aria-label="LinkedIn"
-          class="hover:text-secondary transition-transform transform hover:scale-110"
+          class="hover:text-primary transition-transform transform hover:scale-110"
         >
           <i class="fa-brands fa-linkedin text-2xl"></i>
         </a>
         <a
-          href="mailto:adrien@email.com"
+          href="mailto:adrien.sani.dev@email.com"
           aria-label="Email"
-          class="hover:text-secondary transition-transform transform hover:scale-110"
+          class="hover:text-primary transition-transform transform hover:scale-110"
         >
           <i class="fa-solid fa-envelope text-2xl"></i>
+        </a>
+        <a
+          href="https://wa.me/+237678846493"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="hover:text-primary transition-transform transform hover:scale-110"
+        >
+          <i class="fa-brands fa-whatsapp text-2xl"></i>
         </a>
       </div>
     </div>

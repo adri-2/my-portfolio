@@ -44,7 +44,7 @@
                 }}
               </h1>
             </div>
-            <div class="grid grid-cols-2 md:grid-cols-3 gap-2">
+            <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-2">
               <div
                 v-for="skill in category"
                 :key="skill.id"
@@ -59,7 +59,7 @@
                     alt=""
                     class="w-8 h-8 object-contain"
                   />
-                  <span class="text-white font-medium text-md text-nowrap">
+                  <span class="text-white font-normal text-md text-nowrap">
                     {{ skill.name }}
                   </span>
                 </div>
@@ -226,7 +226,7 @@ const experiences = ref([
     title: "Développeur Backend",
     company: "Innovations-Groups",
     period: "01-2024 - 02-2025",
-    description: "Mise a jour d'un de la plateforme INNO TIME ",
+    description: "Mise a jour des fonctionnalites de la plateforme INNO TIME ",
     skills: ["Python", "Django", "PostgreSQL", "HTML & CSS", "Git"],
     skillsIcons: [pythonIcon, djangoIcon, postgresIcon, htmlIcon, gitIcon],
   },

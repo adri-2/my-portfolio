@@ -1,6 +1,6 @@
 <template>
   <section
-    class="relative py-12 rounded-2xl shadow-lg bg-[#111A3E] max-w-6xl mt-10 p-8 mx-auto overflow-hidden border border-[#1f1641]"
+    class="relative py-8 rounded-2xl shadow-lg bg-[#111A3E] max-w-[98%] mt-10 mx-2 overflow-hidden border border-[#1f1641]"
     id="testimonials"
   >
     <!-- Decorative half borders -->
