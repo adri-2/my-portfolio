@@ -1,7 +1,7 @@
 <template>
   <!-- <div class="m-12 min-h-screen sm:h-20 py-16 px-4"></div> -->
   <footer
-    class="bg-[#111A3E] border-t-4 border-primary relative text-white py-10"
+    class="bg-[#111A3E] border-t-4 border-primary relative text-white p-8"
   >
     <!-- Decorative half border bottom left -->
     <span

@@ -71,9 +71,13 @@ import "swiper/css/pagination";
 import { EffectCoverflow, Navigation, Pagination } from "swiper/modules";
 import { ref } from "vue";
 
-import image1 from "@/assets/image (1).png";
-import image2 from "@/assets/image (2).png";
-// import image3 from "@/assets/image (3).png";
+import image2 from "@/assets/projets/api.png";
+import imageAdvisersAgency from "@/assets/projets/AdvisersAgency.png";
+import CRM_Recrutement_Frontend from "@/assets/projets/CRMRecrutementFrontend.png";
+import Portfolio from "@/assets/projets/Portfolio.png";
+import Simu_API from "@/assets/projets/SimuAPI.png";
+import MangaLib from "@/assets/projets/MangaLib.png";
+import bookapp from "@/assets/projets/bookapp.png";
 
 const navigationOptions = {
   nextEl: ".swiper-button-next",
@@ -87,7 +91,7 @@ const projects = ref([
     title: "Advisers Agency",
     description:
       "Plateforme pour les élèves et étudiants à la recherche de bourses.",
-    image: image1,
+    image: imageAdvisersAgency,
     tags: [
       "React.js",
       "Python",
@@ -95,8 +99,8 @@ const projects = ref([
       "Django Rest Framework",
       "PostgreSQL",
     ],
-    liveLink: "",
-    codeLink: "https://github.com/adri-2/advisers-agency-view.git",
+    liveLink: "https://advisers-agency-view.vercel.app/home",
+    // codeLink: "https://github.com/adri-2/advisers-agency-view.git",
   },
   {
     title: "CRM Recrutement Backend",
@@ -108,27 +112,27 @@ const projects = ref([
     codeLink: "https://github.com/adri-2/crm-projet-backemd.git",
   },
   {
-    title: "CRM Recrutement  Frontend",
+    title: "CRM Recrutement Frontend",
     description:
       "Frontend d'un CRM pour la gestion des clients et des projets.",
-    image: image1,
+    image: CRM_Recrutement_Frontend,
     tags: ["Vue.js", "TailwindCSS"],
-    liveLink: "",
+    liveLink: "https://crm-project.adrien-dev.me/",
     codeLink: "https://github.com/adri-2/crm-project.git",
   },
   {
     title: "Portfolio",
     description:
       "Mon portfolio personnel développé avec Vue.js et TailwindCSS.",
-    image: image2,
+    image: Portfolio,
     tags: ["Vue.js", "TailwindCSS"],
-    liveLink: "",
+    liveLink: "https://adrien-dev.me/",
     codeLink: "https://github.com/adri-2/my-portfolio.git",
   },
   {
     title: "Simu API",
     description: "API de simulation pour différents scénarios métiers.",
-    image: image1,
+    image: Simu_API,
     tags: ["Django", "Django Rest Framework", "PostgreSQL"],
     liveLink: "",
     codeLink: "https://github.com/adri-2/simu-api.git",
@@ -136,7 +140,7 @@ const projects = ref([
   {
     title: "Gestion Location de Livres",
     description: "Projet Django pour la gestion de location des livres.",
-    image: image2,
+    image: bookapp,
     tags: ["Django", "Django Rest Framework", "PostgreSQL"],
     liveLink: "",
     codeLink: "https://github.com/adri-2/gestion-location-livres.git",
@@ -145,7 +149,7 @@ const projects = ref([
     title: "MangaLib",
     description:
       "Bibliothèque en ligne pour la gestion et la lecture de mangas.",
-    image: image1,
+    image: MangaLib,
     tags: ["Vue.js", "Django", "Django Rest Framework", "PostgreSQL"],
     liveLink: "",
     codeLink: "https://github.com/adri-2/mangalib.git",

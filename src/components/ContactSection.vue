@@ -183,15 +183,21 @@ function sendEmail() {
   emailjs
 
     .send(
-      "service_4rfukca", // ton service ID
-      "template_pkia8td", // ton template ID
+      import.meta.env.VITE_SERVICE_ID,
+      import.meta.env.VITE_TEMPLATE_ID,
       {
         from_name: form.value.name,
         from_email: form.value.email,
         subject: form.value.subject,
-        message: form.value.message,
+        message: `
+      Nom: ${form.value.name}
+      Email: ${form.value.email}
+    }
+      Message: ${form.value.message}
+      
+      `,
       },
-      "_S-KWFa-THi1E5DQ5" // ta clé publique
+      import.meta.env.VITE_PUBLIC_KEY
     )
     .then(() => {
       success.value = true;
