@@ -2,37 +2,38 @@ import { memo } from "react";
 import backendIcon from "@/assets/Developer back c.png";
 import frontendIcon from "@/assets/Developer font.png";
 import figmaIcon from "@/assets/wireframe c.png";
-import dataIcon from "@/assets/Data extraction c.png";
+import blockchainIcon from "@/assets/Data extraction c.png";
 
 const SERVICES = [
   {
     id: 1,
     icon: backendIcon,
-    name: "DEVELOPMENT BACKEND",
+    name: "DÉVELOPPEMENT BACKEND",
     description:
-      "Python / Django / Flask : Développement d’API performantes et sécurisées.",
+      "Conception d’API performantes et sécurisées avec Python, Django, Django REST Framework, FastAPI et NestJS.",
   },
   {
     id: 2,
     icon: frontendIcon,
-    name: "DEVELOPMENT FRONTEND",
+    name: "DÉVELOPPEMENT FRONTEND",
     description:
-      "Conception d’interfaces réactives, performantes intuitives et esthétiques. Utilisation de Vue.js et React.",
+      "Création d’interfaces modernes, réactives et performantes avec React, TypeScript et Tailwind CSS.",
   },
   {
     id: 3,
-    icon: figmaIcon,
-    name: "CREATION D'INTERFACE FIGMA",
-    description: "Conception d’interfaces intuitives et esthétiques.",
+    icon: blockchainIcon,
+    name: "BLOCKCHAIN & WEB3",
+    description:
+      "Développement de smart contracts et d’applications décentralisées avec Solidity, Hardhat, Ethers.js et Web3.py.",
   },
   {
     id: 4,
-    icon: dataIcon,
-    name: "DATA ANALYSIS",
-    description: "Analyse de données et modélisation avec Python.",
+    icon: figmaIcon,
+    name: "UI/UX & CONCEPTION D'INTERFACES",
+    description:
+      "Conception d’interfaces modernes, intuitives et cohérentes avec Figma et les principes d’UI/UX.",
   },
 ];
-
 function ServicesSection() {
   return (
     <section className="section-shell py-20 text-white md:py-28" id="services">
