@@ -1,4 +1,5 @@
 import { memo, useCallback } from "react";
+import { ArrowUp } from "lucide-react";
 import logo from "@/assets/logo.png";
 import { useScrolledPast } from "@/hooks/useScrolledPast.js";
 
@@ -23,7 +24,7 @@ function FooterSection() {
               loading="lazy"
               className="w-20 h-20 rounded-full object-cover border-2 border-primary shadow-lg"
             />
-            <span className="font-bold text-xl bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary">
+            <span className="font-bold text-xl bg-clip-text text-transparent bg-linear-to-r from-primary to-secondary">
               Adrien Portfolio
             </span>
           </div>
@@ -93,10 +94,10 @@ function FooterSection() {
       {showButton && (
         <button
           onClick={scrollToTop}
-          className="fixed bottom-8 right-8 z-50 w-12 h-12 bg-gradient-to-r from-primary to-secondary text-white rounded-full shadow-lg hover:scale-110 transition flex items-center justify-center"
+          className="fixed bottom-8 right-8 z-50 w-12 h-12 bg-linear-to-r from-primary to-secondary text-white rounded-full shadow-lg hover:scale-110 transition flex items-center justify-center"
           aria-label="Retour en haut"
         >
-          <i className="fa-solid fa-arrow-up fa-lg"></i>
+          <ArrowUp size={30} strokeWidth={2.2} aria-hidden="true" />
         </button>
       )}
     </>
