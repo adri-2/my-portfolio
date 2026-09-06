@@ -14,12 +14,12 @@ function HeroSection() {
   }, [roles.length, shouldReduceMotion]);
 
   return (
-    <section id="top" className="relative w-full" data-aos="zoom-in-up">
+    <section id="top" className="relative w-full overflow-visible" data-aos="zoom-in-up">
       <div className="relative mx-auto w-full max-w-7xl px-5 sm:px-12 lg:px-8">
-        <div className="relative mx-auto grid max-w-3xl gap-12 pb-16 pt-20 lg:max-w-none lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:gap-16 lg:pb-24 lg:pt-28">
+        <div className="relative mx-auto grid max-w-3xl gap-8 pb-10 pt-4 lg:min-h-[calc(100svh-5rem)] lg:max-w-none lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:gap-10 lg:pb-12 lg:pt-8">
           <div className="lg:py-4" data-aos="fade-right">
             <div className="text-center lg:text-left">
-              <p className="eyebrow mb-5 text-xs font-medium uppercase text-primary">Portfolio développeur · 2025</p>
+              {/* <p className="eyebrow mb-5 text-xs font-medium uppercase text-primary">Portfolio développeur · 2025</p> */}
               <p className="mb-4 text-sm font-medium uppercase tracking-[0.18em] text-slate-400">Hello, I&apos;m...</p>
               <h1 className="pt-2 text-5xl font-bold leading-[0.98] tracking-[-0.06em] text-white md:text-7xl lg:text-[5.5rem]">
                 Adrien <span className="text-primary">Sani</span>
@@ -51,21 +51,18 @@ function HeroSection() {
               </a>
 
               <a
-                href="#contact"
+                href="/medias/cv adrien.pdf"
                 className="w-full rounded-full border border-white/20 px-6 py-3 text-center font-semibold text-white transition duration-300 hover:scale-[1.03] hover:border-primary hover:bg-primary/10 sm:w-max"
               >
-                Me contacter
+                   Télécharger le CV
               </a>
             </div>
-            <a href="/medias/cv adrien.pdf" download="cv adrien.pdf" className="mt-5 inline-block text-center text-sm text-slate-400 transition hover:text-primary lg:text-left">
-              <i className="fa-solid fa-download mr-2 text-primary" aria-hidden="true"></i>
-              Télécharger le CV
-            </a>
+           
           </div>
 
-          <div className="mt-4 flex items-center justify-center lg:h-full">
-            <div className="flex w-full h-full min-h-[25rem] lg:w-full lg:h-full items-end relative justify-center">
-              <div className="hero-orbit relative z-10 flex h-64 w-64 items-end justify-center rounded-full border-8 border-primary/90 p-2 shadow-2xl shadow-primary/20 sm:h-80 sm:w-80" data-aos="zoom-in" data-aos-delay="200">
+          <div className="mt-0 flex items-center justify-center lg:h-full">
+            <div className="relative flex w-full items-center justify-center">
+              <div className="hero-orbit relative z-10 flex h-56 w-56 shrink-0 items-end justify-center rounded-full border-8 border-primary/90 p-2 shadow-2xl shadow-primary/20 sm:h-72 sm:w-72" data-aos="zoom-in" data-aos-delay="200">
                 <img
                   src={profileImg}
                   alt="Adrien"
@@ -123,7 +120,7 @@ function HeroSection() {
         </div>
         <a href="#services" className="mx-auto flex w-fit flex-col items-center gap-2 text-xs uppercase tracking-[0.22em] text-slate-500 transition hover:text-primary" aria-label="Descendre vers les services">
           <span>Scroll to explore</span>
-          <span className="h-10 w-px bg-gradient-to-b from-primary to-transparent"></span>
+          <span className="h-10 w-px bg-linear-to-b from-primary to-transparent"></span>
         </a>
       </div>
     </section>

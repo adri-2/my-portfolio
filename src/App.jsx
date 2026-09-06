@@ -46,30 +46,32 @@ function App() {
     <div className="app-shell min-h-screen overflow-x-hidden">
       <AnimatedBackground />
       <NavBar />
-      <HeroSection />
+      <main className="relative">
+        <HeroSection />
 
-      <Suspense fallback={<SectionFallback />}>
-        <ServicesSection />
-      </Suspense>
-      <Suspense fallback={<SectionFallback />}>
-        <AboutSection />
-      </Suspense>
-      <Suspense fallback={<SectionFallback />}>
-        <ExperienceAndSkills />
-      </Suspense>
-      <Suspense fallback={<SectionFallback />}>
-        <ProjectSection />
-      </Suspense>
-      <Suspense fallback={<SectionFallback />}>
-        <TestimonialsSection />
-      </Suspense>
-      <Suspense fallback={<SectionFallback />}>
-        <ContactSection />
-      </Suspense>
-      {/* <CertificationsPage /> */}
-      <Suspense fallback={<SectionFallback />}>
-        <FooterSection />
-      </Suspense>
+        <Suspense fallback={<SectionFallback />}>
+          <ServicesSection />
+        </Suspense>
+        <Suspense fallback={<SectionFallback />}>
+          <AboutSection />
+        </Suspense>
+        <Suspense fallback={<SectionFallback />}>
+          <ExperienceAndSkills />
+        </Suspense>
+        <Suspense fallback={<SectionFallback />}>
+          <ProjectSection />
+        </Suspense>
+        <Suspense fallback={<SectionFallback />}>
+          <TestimonialsSection />
+        </Suspense>
+        <Suspense fallback={<SectionFallback />}>
+          <ContactSection />
+        </Suspense>
+        {/* <CertificationsPage /> */}
+        <Suspense fallback={<SectionFallback />}>
+          <FooterSection />
+        </Suspense>
+      </main>
     </div>
   );
 }
