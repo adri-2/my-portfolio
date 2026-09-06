@@ -156,6 +156,18 @@ a {
   will-change: transform;
 }
 
+.hero-skill-badge {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(var(--skill-angle)) translateY(-9rem);
+}
+
+@media (min-width: 640px) {
+  .hero-skill-badge {
+    transform: translate(-50%, -50%) rotate(var(--skill-angle)) translateY(-11rem);
+  }
+}
+
 .floating-badge:nth-child(2) {
   animation-delay: -1.2s;
 }

@@ -1,20 +1,19 @@
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { memo, useEffect, useState } from "react";
 import profileImg from "@/assets/photo-user.jpg";
-import pythonIcon from "@/assets/icons8-python.svg";
-import reactIcon from "@/assets/icons8-react-native.svg";
-import vueIcon from "@/assets/icons8-vue-js.svg";
-import djangoIcon from "@/assets/icons8-django.svg";
-import dockerIcon from "@/assets/icons8-logo-docker.svg";
-import postgresIcon from "@/assets/icons8-postgresql.svg";
 
 const HERO_SKILLS = [
-  { name: "Python", icon: pythonIcon, position: "-top-10 left-1/2 -translate-x-1/2" },
-  { name: "React", icon: reactIcon, position: "-right-7 -top-7" },
-  { name: "Vue.js", icon: vueIcon, position: "-right-10 top-1/2 -translate-y-1/2" },
-  { name: "Docker", icon: dockerIcon, position: "-bottom-9 right-7" },
-  { name: "PostgreSQL", icon: postgresIcon, position: "-bottom-9 left-1/2 -translate-x-1/2" },
-  { name: "Django", icon: djangoIcon, position: "-left-10 top-1/2 -translate-y-1/2" },
+  { name: "React", image: "https://cdn.simpleicons.org/react/61DAFB", angle: 0 },
+ 
+  { name: "Django", image: "https://cdn.simpleicons.org/django/092E20", angle: 45 },
+   { name: "FastAPI", image: "https://cdn.simpleicons.org/fastapi/009688", angle: 90 },
+  { name: "Django REST Framework", image: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/djangorest/djangorest-original.svg", angle: 135 },
+ 
+    { name: "Expo", image: "https://cdn.simpleicons.org/expo/000020", angle: 180 },
+  { name: "NestJS", image: "https://cdn.simpleicons.org/nestjs/E0234E", angle: 225 },
+  { name: "Hardhat", image: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/hardhat/hardhat-original.svg", angle: 270 },
+
+   { name: "Vue.js", image: "https://cdn.simpleicons.org/vuedotjs/4FC08D", angle: 315 },
 ];
 
 function HeroSection() {
@@ -90,10 +89,16 @@ function HeroSection() {
                 {HERO_SKILLS.map((skill) => (
                   <div
                     key={skill.name}
-                    className={`floating-badge absolute ${skill.position} flex h-10 w-10 items-center justify-center rounded-full border border-primary/30 bg-[#f2f4fb] p-2 shadow-lg shadow-black/30 transition-all duration-300 hover:scale-125`}
+                    className="hero-skill-badge absolute flex h-10 w-10 items-center justify-center rounded-full border border-primary/30 bg-[#f2f4fb] p-2 shadow-lg shadow-black/30"
+                    style={{ "--skill-angle": `${skill.angle}deg` }}
                     title={skill.name}
                   >
-                    <img src={skill.icon} alt={skill.name} className="h-full w-full object-contain" />
+                    <img
+                      src={skill.image}
+                      alt={skill.name}
+                      className="h-full w-full object-contain transition duration-300 hover:scale-125"
+                      style={{ transform: `rotate(${-skill.angle}deg)` }}
+                    />
                   </div>
                 ))}
               </div>
