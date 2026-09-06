@@ -40,32 +40,32 @@ function ServicesSection() {
         <p className="mb-3 text-center text-xs font-semibold uppercase tracking-[0.25em] text-primary">Ce que je construis</p>
         <h2 className="section-heading text-center text-4xl font-bold text-white md:text-5xl">
           Mes{" "}
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
+          <span className="text-transparent bg-clip-text bg-linear-to-r from-primary to-secondary">
             Services
           </span>
         </h2>
       </div>
-      <div className="grid grid-cols-1 gap-5 pt-10 sm:grid-cols-2 md:pt-14">
+      <div className="grid grid-cols-1 gap-4 px-3 pt-8 sm:grid-cols-2 sm:px-6 md:gap-5 md:px-10 md:pt-10 xl:px-16">
         {SERVICES.map((service) => (
           <div
             key={service.id}
             data-aos="fade-up"
             data-aos-delay={service.id * 100}
-            className="surface-card group rounded-2xl px-7 py-8 transition duration-500 hover:-translate-y-2 hover:border-primary/70 hover:shadow-[0_1rem_3rem_rgba(254,90,0,0.1)] md:py-10"
+            className="surface-card group flex min-h-72 flex-col rounded-2xl px-5 py-5 transition duration-500 hover:-translate-y-2 hover:border-primary/70 hover:shadow-[0_1rem_3rem_rgba(254,90,0,0.1)] sm:min-h-76 sm:px-6 sm:py-6"
           >
-            <div className="mx-auto h-16 text-center xl:h-28 xl:w-28 mb-16 md:mb-0">
+            <div className="mx-auto flex h-24 w-24 items-center justify-center text-center sm:h-28 sm:w-28">
               <img
                 src={service.icon}
                 alt={service.name}
                 loading="lazy"
-                className="h-56 object-contain transition duration-500 group-hover:scale-105 md:h-28"
+                className="h-full w-full object-contain transition duration-500 group-hover:scale-105"
               />
             </div>
-            <div className="text-center flex flex-col justify-end md:py-0 md:my-4 py-12 my-8">
-              <h3 className="pt-8 text-lg font-semibold uppercase text-transparent bg-clip-text bg-gradient-to-tr from-primary to-secondary lg:text-xl">
+            <div className="flex flex-1 flex-col justify-center text-center">
+              <h3 className="pt-4 text-base font-semibold uppercase text-transparent bg-clip-text bg-linear-to-tr from-primary to-secondary sm:text-lg">
                 {service.name}
               </h3>
-              <p className="pt-4 text-sm leading-7 text-slate-300 md:text-base">
+              <p className="pt-3 text-sm leading-6 text-slate-300">
                 {service.description}
               </p>
             </div>
