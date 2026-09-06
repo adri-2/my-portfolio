@@ -120,7 +120,7 @@ function ProjectSection() {
     >
       <p className="mb-3 text-center text-xs font-semibold uppercase tracking-[0.25em] text-primary">Sélection de réalisations</p>
       <h2 className="section-heading mb-12 text-center text-4xl font-bold text-white md:text-5xl">
-        <span className="inline-block mb-2">Mes</span>
+        <span className="inline-block mb-2 mr-4">Mes</span>
         <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
           Projets
         </span>

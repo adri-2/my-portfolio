@@ -1,4 +1,5 @@
 import { memo } from "react";
+import { Code2, Monitor, Server, Wrench } from "lucide-react";
 
 import pythonIcon from "@/assets/icons8-python.svg";
 import tailwindIcon from "@/assets/icons8-tailwind-css.svg";
@@ -72,10 +73,10 @@ const CATEGORY_LABELS = {
 };
 
 const CATEGORY_ICONS = {
-  languages: jsIcon,
-  frontend: reactIcon,
-  backend: djangoIcon,
-  tools: githubIcon,
+  languages: Code2,
+  frontend: Monitor,
+  backend: Server,
+  tools: Wrench,
 };
 
 const EXPERIENCES = [
@@ -138,7 +139,7 @@ function ExperienceAndSkills() {
           <div className="mt-4 md:mt-0 text-left flex flex-col z-10 h-full w-full">
             <h2 className="section-heading mb-4 text-left text-4xl font-bold text-white md:text-5xl">
               Mes{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
+              <span className="text-transparent bg-clip-text bg-linear-to-r from-primary to-secondary">
                 Compétences
               </span>
             </h2>
@@ -151,12 +152,16 @@ function ExperienceAndSkills() {
                 >
                   <div className="flex gap-x-4 items-center mb-4">
                     <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/15 p-3 ring-1 ring-primary/30">
-                      <img
-                        src={CATEGORY_ICONS[key]}
-                        alt=""
-                        aria-hidden="true"
-                        className="h-full w-full object-contain"
-                      />
+                      {(() => {
+                        const CategoryIcon = CATEGORY_ICONS[key];
+                        return (
+                          <CategoryIcon
+                            className="h-full w-full text-primary"
+                            strokeWidth={1.8}
+                            aria-hidden="true"
+                          />
+                        );
+                      })()}
                     </div>
                     <h1 className="text-xl font-bold">
                       {CATEGORY_LABELS[key] ?? key}
@@ -165,7 +170,7 @@ function ExperienceAndSkills() {
                   <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-2">
                     {category.map((skill) => (
                         <div key={skill.id} className="flex items-center">
-                        <div className="flex h-16 w-full min-w-0 flex-row items-center gap-x-3 rounded-xl border border-white/10 bg-white/[0.04] p-2 transition duration-300 hover:-translate-y-1 hover:border-primary/50 hover:bg-primary/[0.06]">
+                        <div className="flex h-16 w-full min-w-0 flex-row items-center gap-x-3 rounded-xl border border-white/10 bg-white/4 p-2 transition duration-300 hover:-translate-y-1 hover:border-primary/50 hover:bg-primary/6">
                           <img
                             src={skill.icon}
                             alt={skill.name}
@@ -197,14 +202,14 @@ function ExperienceAndSkills() {
         <div>
           <h2 className="section-heading mb-12 text-center text-4xl font-bold text-white md:text-5xl">
             Expérience{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
+            <span className="text-transparent bg-clip-text bg-linear-to-r from-primary to-secondary">
               Professionnelle
             </span>
           </h2>
           <div className="relative border-l border-primary/50">
             {EXPERIENCES.map((exp) => (
               <div key={exp.id} className="mb-10 ml-6 relative group" data-aos="fade-up">
-                <span className="absolute -left-[0.45rem] top-1 h-3 w-3 rounded-full bg-primary ring-4 ring-[#0c0e14]"></span>
+                <span className="absolute left-[-0.45rem] top-1 h-3 w-3 rounded-full bg-primary ring-4 ring-[#0c0e14]"></span>
                 <div className="surface-card rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1 hover:border-primary/60">
                   <h3 className="text-xl font-semibold text-white">{exp.title}</h3>
                   <p className="text-sm text-gray-400 mb-2">

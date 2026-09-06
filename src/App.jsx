@@ -18,16 +18,16 @@ const ExperienceAndSkills = lazy(() =>
   import("./components/ExperienceAndSkills.jsx")
 );
 const ProjectSection = lazy(() => import("./components/ProjectSection.jsx"));
-const TestimonialsSection = lazy(() =>
-  import("./components/TestimonialsSection.jsx")
-);
+// const TestimonialsSection = lazy(() =>
+//   import("./components/TestimonialsSection.jsx")
+// );
 const ContactSection = lazy(() => import("./components/ContactSection.jsx"));
 const FooterSection = lazy(() => import("./components/FooterSection.jsx"));
 // const CertificationsPage = lazy(() => import("./pages/CertificationsPage.jsx"));
 
 // Fallback neutre : un simple espace réservé pour limiter le layout shift
 // pendant le téléchargement du chunk, sans spinner intrusif.
-const SectionFallback = () => <div className="min-h-[10rem]" aria-hidden="true" />;
+const SectionFallback = () => <div className="min-h-40" aria-hidden="true" />;
 
 function App() {
   // AOS est initialisé une seule fois pour toute l'app (au lieu d'un
@@ -61,9 +61,7 @@ function App() {
         <Suspense fallback={<SectionFallback />}>
           <ProjectSection />
         </Suspense>
-        <Suspense fallback={<SectionFallback />}>
-          <TestimonialsSection />
-        </Suspense>
+        {/* Témoignages temporairement désactivés. */}
         <Suspense fallback={<SectionFallback />}>
           <ContactSection />
         </Suspense>

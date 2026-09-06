@@ -8,7 +8,7 @@ const MENU = [
   { name: "À propos", href: "#about" },
   { name: "Compétences", href: "#skills" },
   { name: "Projets", href: "#projects" },
-  { name: "Témoignages", href: "#testimonials" },
+  // Témoignages temporairement désactivés.
   { name: "Contact", href: "#contact" },
 ];
 
