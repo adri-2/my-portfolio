@@ -50,7 +50,7 @@ function ContactSection() {
 
         <h2 className="section-heading mb-10 text-center text-4xl font-bold text-white md:text-5xl">
           Contactez{" "}
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
+          <span className="text-transparent bg-clip-text bg-linear-to-r from-primary to-secondary">
             Moi
           </span>
         </h2>
