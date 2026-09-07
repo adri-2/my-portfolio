@@ -1,6 +1,6 @@
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { memo, useEffect, useState } from "react";
-import profileImg from "@/assets/photo-user.jpg";
+import profileImg from "@/assets/logo_me.jpg";
 
 const HERO_SKILLS = [
   { name: "React", image: "https://cdn.simpleicons.org/react/61DAFB", angle: 0 },
