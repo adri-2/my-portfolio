@@ -65,7 +65,7 @@ function HeroSection() {
               </a>
 
               <a
-                href="/medias/cv adrien.pdf"
+                href="/medias/cv_adrien_sani.pdf"
                 className="w-full rounded-full border border-white/20 px-6 py-3 text-center font-semibold text-white transition duration-300 hover:scale-[1.03] hover:border-primary hover:bg-primary/10 sm:w-max"
               >
                    Télécharger le CV

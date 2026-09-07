@@ -152,7 +152,7 @@ function ContactSection() {
 
               {/* GitHub */}
               <a
-                href="https://github.com"
+                href="https://github.com/adri-2"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex flex-col items-center gap-3 rounded-xl border border-primary/30 bg-primary/5 p-4 sm:p-6 transition hover:bg-primary/10 hover:border-primary/60 hover:shadow-lg hover:shadow-primary/20"
