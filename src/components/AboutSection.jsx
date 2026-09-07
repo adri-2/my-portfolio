@@ -3,25 +3,26 @@ import { memo } from "react";
 import graduationCap from "@/assets/graduation-cap--v1.png";
 
 const EDUCATION = [
+    {
+    id: 0,
+    school: "IUT DE DOUALA",
+    program: "Licence Professionnelle en Génie Logiciel",
+    year: "2024-2025",
+  },
   {
     id: 1,
     school: "IUT DE DOUALA",
     program: "Diplôme Universitaire de Technologie (DUT) en Informatique",
-    year: "2024",
+    year: "2023-2024",
   },
-  {
-    id: 2,
-    school: "IUT DE DOUALA",
-    program: "Licence Professionnelle en Génie Logiciel",
-    year: "2025",
-  },
+
 ];
 
 const BOX_INFOS = [
   { h: "+4", p: "Clients" },
-  { h: "3", p: "Ans" },
-  { h: "10", p: "Projets" },
-  { h: "10", p: "Certifications" },
+  { h: "+3", p: "Ans" },
+  { h: "+10", p: "Projets" },
+  { h: "+10", p: "Certifications" },
 ];
 
 function AboutSection() {
@@ -34,7 +35,7 @@ function AboutSection() {
         >
           <h2 className="section-heading mb-10 text-center text-4xl font-bold text-white md:text-5xl">
             Parcours{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
+            <span className="text-transparent bg-clip-text bg-linear-to-r from-primary to-secondary">
               Scolaire{" "}
             </span>
           </h2>
@@ -70,16 +71,13 @@ function AboutSection() {
         >
           <h2 className="section-heading mt-4 text-left text-4xl font-bold text-white md:text-5xl md:text-center">
             En savoir{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
+            <span className="text-transparent bg-clip-text bg-linear-to-r from-primary to-secondary">
               Plus sur{" "}
             </span>
             Moi
           </h2>
           <p className="mt-8 max-w-xl py-4 text-base leading-8 text-slate-300 lg:text-lg">
-            Je suis un développeur full-stack passionné par la création
-            d’applications web performantes et visuellement soignées. Je
-            combine Python, Vue.js, React et Figma pour concevoir des
-            solutions robustes et intuitives.
+           Je suis un développeur full-stack passionné par la création d’applications web performantes, robustes et intuitives. Je combine ReactJS, TypeScript, Python, Django et FastAPI pour concevoir des solutions modernes et évolutives. Je travaille également sur des architectures backend, des API et des applications Blockchain & Web3 avec Solidity.
           </p>
 
           <div className="grid max-w-lg grid-cols-2 gap-3 pt-8 sm:grid-cols-4">

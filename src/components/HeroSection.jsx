@@ -83,7 +83,7 @@ function HeroSection() {
                   width={250}
                   height={250}
                   loading="eager"
-                  fetchpriority="high"
+                  fetchPriority="high"
                   className="h-full w-full rounded-full object-cover"
                 />
                 {HERO_SKILLS.map((skill) => (
