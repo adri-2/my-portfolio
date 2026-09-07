@@ -159,12 +159,12 @@ a {
 .hero-skill-badge {
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%) rotate(var(--skill-angle)) translateY(-9rem);
+  transform: translate(-50%, -50%) rotate(var(--skill-angle)) translateY(-12rem);
 }
 
 @media (min-width: 640px) {
   .hero-skill-badge {
-    transform: translate(-50%, -50%) rotate(var(--skill-angle)) translateY(-11rem);
+    transform: translate(-50%, -50%) rotate(var(--skill-angle)) translateY(-15rem);
   }
 }
 

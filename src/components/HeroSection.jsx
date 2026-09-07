@@ -1,6 +1,7 @@
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { memo, useEffect, useState } from "react";
 import profileImg from "@/assets/logo_me.jpg";
+import cvFile from "@/media/cv_adrien_sani.pdf";
 
 const HERO_SKILLS = [
   { name: "React", image: "https://cdn.simpleicons.org/react/61DAFB", angle: 0 },
@@ -17,7 +18,7 @@ const HERO_SKILLS = [
 ];
 
 function HeroSection() {
-  const roles = ["Full Stack Developer", "Backend Developer", "API Developer", "Software Engineer"];
+  const roles = ["Développeur Full Stack", "Développeur Python", "Développeur API", "Ingénieur Logiciel","Développeur Mobile","Developpeur Blockchain"];
   const [roleIndex, setRoleIndex] = useState(0);
   const shouldReduceMotion = useReducedMotion();
 
@@ -34,9 +35,9 @@ function HeroSection() {
           <div className="lg:py-4" data-aos="fade-right">
             <div className="text-center lg:text-left">
               {/* <p className="eyebrow mb-5 text-xs font-medium uppercase text-primary">Portfolio développeur · 2025</p> */}
-              <p className="mb-4 text-sm font-medium uppercase tracking-[0.18em] text-slate-400">Hello, I&apos;m...</p>
-              <h1 className="pt-2 text-5xl font-bold leading-[0.98] tracking-[-0.06em] text-white md:text-7xl lg:text-[5.5rem]">
-                Adrien <span className="text-primary">Sani</span>
+              <p className="mb-4 text-sm font-medium uppercase tracking-[0.18em] text-slate-500">Hello, Je suis</p>
+              <h1 className="pt-2 text-5xl font-bold leading-[0.98] tracking-[-0.06em] text-white md:text-5xl lg:text-[4.5rem]">
+                Sani <span className="text-primary">Adrien</span>
               </h1>
               <div className="mt-6 h-10 overflow-hidden text-2xl font-semibold text-slate-200 md:text-3xl">
                 <AnimatePresence mode="wait">
@@ -47,15 +48,16 @@ function HeroSection() {
               </div>
             </div>
             <p className="mx-auto max-w-xl pt-6 text-center text-base leading-8 text-slate-300 lg:mx-0 lg:text-left">
-              <span className="text-xl font-semibold text-primary">
-                Développeur full-stack
-              </span>{" "}
-              passionné, expert en Python, Vue.js et React, je conçois des
-              applications web performantes et ergonomiques. Mon savoir-faire
-              s’étend aussi à l’analyse de données, au machine learning, et à
-              des domaines connexes comme la cybersécurité et l’administration
-              système.
-            </p>
+  <span className="text-xl font-semibold text-primary">
+    Développeur full-stack
+  </span>{" "}
+  spécialisé dans la conception d’applications web modernes, performantes et
+  évolutives. Je travaille principalement avec React, TypeScript, Python,
+  Django, Django REST Framework et FastAPI pour construire des interfaces
+  intuitives et des APIs robustes. J’interviens également sur des projets
+  backend complexes, les architectures distribuées et les technologies
+  Blockchain & Web3.
+</p>
             <div className="flex flex-col items-center gap-3 pt-9 sm:mx-auto sm:w-max sm:flex-row lg:mx-0" data-aos="fade-up" data-aos-delay="250">
               <a
                 href="#projects"
@@ -65,7 +67,8 @@ function HeroSection() {
               </a>
 
               <a
-                href="/medias/cv_adrien_sani.pdf"
+                href={cvFile}
+                download="cv_adrien_sani.pdf"
                 className="w-full rounded-full border border-white/20 px-6 py-3 text-center font-semibold text-white transition duration-300 hover:scale-[1.03] hover:border-primary hover:bg-primary/10 sm:w-max"
               >
                    Télécharger le CV
@@ -76,7 +79,7 @@ function HeroSection() {
 
           <div className="mt-0 flex items-center justify-center px-6 py-8 sm:px-10 sm:py-10 lg:h-full lg:px-14">
             <div className="relative flex w-full items-center justify-center">
-              <div className="hero-orbit relative z-10 flex h-56 w-56 shrink-0 items-end justify-center rounded-full border-8 border-primary/90 p-2 shadow-2xl shadow-primary/20 sm:h-72 sm:w-72" data-aos="zoom-in" data-aos-delay="200">
+              <div className="hero-orbit relative z-10 flex h-[18rem] w-[18rem] shrink-0 items-end justify-center rounded-full border-8 border-primary/90 p-2 shadow-2xl shadow-primary/20 sm:h-[24rem] sm:w-[24rem]" data-aos="zoom-in" data-aos-delay="200">
                 <img
                   src={profileImg}
                   alt="Adrien"

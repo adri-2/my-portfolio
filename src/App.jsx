@@ -1,4 +1,4 @@
-import { lazy, Suspense, useEffect } from "react";
+import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -8,26 +8,13 @@ import "aos/dist/aos.css";
 import NavBar from "./components/NavBar.jsx";
 import HeroSection from "./components/HeroSection.jsx";
 import AnimatedBackground from "./components/AnimatedBackground.jsx";
-
-// Le reste est chargé à la demande (code-splitting), comme le faisait
-// defineAsyncComponent côté Vue : chaque section devient son propre chunk,
-// téléchargé au moment du rendu plutôt que dans le bundle initial.
-const ServicesSection = lazy(() => import("./components/ServicesSection.jsx"));
-const AboutSection = lazy(() => import("./components/AboutSection.jsx"));
-const ExperienceAndSkills = lazy(() =>
-  import("./components/ExperienceAndSkills.jsx")
-);
-const ProjectSection = lazy(() => import("./components/ProjectSection.jsx"));
-// const TestimonialsSection = lazy(() =>
-//   import("./components/TestimonialsSection.jsx")
-// );
-const ContactSection = lazy(() => import("./components/ContactSection.jsx"));
-const FooterSection = lazy(() => import("./components/FooterSection.jsx"));
+import ServicesSection from "./components/ServicesSection.jsx";
+import AboutSection from "./components/AboutSection.jsx";
+import ExperienceAndSkills from "./components/ExperienceAndSkills.jsx";
+import ProjectSection from "./components/ProjectSection.jsx";
+import ContactSection from "./components/ContactSection.jsx";
+import FooterSection from "./components/FooterSection.jsx";
 // const CertificationsPage = lazy(() => import("./pages/CertificationsPage.jsx"));
-
-// Fallback neutre : un simple espace réservé pour limiter le layout shift
-// pendant le téléchargement du chunk, sans spinner intrusif.
-const SectionFallback = () => <div className="min-h-40" aria-hidden="true" />;
 
 function App() {
   // AOS est initialisé une seule fois pour toute l'app (au lieu d'un
@@ -49,26 +36,14 @@ function App() {
       <main className="relative">
         <HeroSection />
 
-        <Suspense fallback={<SectionFallback />}>
-          <ServicesSection />
-        </Suspense>
-        <Suspense fallback={<SectionFallback />}>
-          <AboutSection />
-        </Suspense>
-        <Suspense fallback={<SectionFallback />}>
-          <ExperienceAndSkills />
-        </Suspense>
-        <Suspense fallback={<SectionFallback />}>
-          <ProjectSection />
-        </Suspense>
+        <ServicesSection />
+        <AboutSection />
+        <ExperienceAndSkills />
+        <ProjectSection />
         {/* Témoignages temporairement désactivés. */}
-        <Suspense fallback={<SectionFallback />}>
-          <ContactSection />
-        </Suspense>
+        <ContactSection />
         {/* <CertificationsPage /> */}
-        <Suspense fallback={<SectionFallback />}>
-          <FooterSection />
-        </Suspense>
+        <FooterSection />
       </main>
     </div>
   );

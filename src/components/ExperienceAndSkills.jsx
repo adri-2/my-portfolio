@@ -240,7 +240,7 @@ const EXPERIENCES = [
 function ExperienceAndSkills() {
   return (
     <>
-      <section className="section-shell grid grid-cols-1 py-20 text-white md:py-28" id="skills">
+      <section className="section-shell relative grid grid-cols-1 overflow-hidden py-20 text-white md:py-28" id="skills">
         <div>
           <div className="mt-4 md:mt-0  text-left flex flex-col z-10 h-full w-full">
             <h2 className="section-heading mb-4 text-left text-4xl font-bold text-white md:text-5xl">
@@ -306,7 +306,7 @@ function ExperienceAndSkills() {
           </div>
         </div>
 
-        <div className="pointer-events-none absolute right-0 top-[110rem] h-full w-full justify-end">
+        <div className="pointer-events-none absolute right-0 top-1/2 h-96 w-full -translate-y-1/2 justify-end">
           <span className="flex opacity-20">
             <span className="flex h-80 w-16 rounded-l-full bg-primary blur-2xl"></span>
             <span className="mt-14 flex h-80 w-16 rounded-l-full bg-primary blur-2xl"></span>
