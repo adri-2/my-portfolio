@@ -113,7 +113,7 @@ const EXPERIENCES = [
     id: 1,
     title: "Développeur Backend — Boardgame",
     company: "Projet Boardgame",
-    period: "07-2026 - 08-2026",
+    period: "07-2026 - 09-2026",
     description:
       "Développement du backend d'une application mobile de jeux multijoueurs (dames, ludo, échecs), avec matchmaking en temps réel, communication WebSocket, gestion des parties et de leur état, système de mises en coins et organisation de tournois.",
     skills: [
