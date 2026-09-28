@@ -1,4 +1,5 @@
 import { memo, useState } from "react";
+import { motion, useReducedMotion } from "framer-motion";
 
 function ProjectCard({
   title = "Project Title",
@@ -10,9 +11,15 @@ function ProjectCard({
   type = "personal",
 }) {
   const [imageLoaded, setImageLoaded] = useState(false);
+  const shouldReduceMotion = useReducedMotion();
 
   return (
-    <article className="surface-card group relative max-w-sm overflow-hidden rounded-2xl transition duration-500 hover:-translate-y-2 hover:border-primary/60 hover:shadow-[0_1rem_3rem_rgba(254,90,0,0.12)]">
+    <motion.article
+      className="surface-card group relative max-w-sm overflow-hidden rounded-2xl transition duration-500 hover:border-primary/60 hover:shadow-[0_1rem_3rem_rgba(254,90,0,0.12)]"
+      whileHover={shouldReduceMotion ? undefined : { y: -8, scale: 1.012 }}
+      whileTap={shouldReduceMotion ? undefined : { scale: 0.99 }}
+      transition={{ type: "spring", stiffness: 260, damping: 22 }}
+    >
       {/* image section */}
       <figure>
         {image ? (
@@ -85,7 +92,7 @@ function ProjectCard({
           </a>
         )}
       </div>
-    </article>
+    </motion.article>
   );
 }
 

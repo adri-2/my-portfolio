@@ -29,14 +29,14 @@ function HeroSection() {
   }, [roles.length, shouldReduceMotion]);
 
   return (
-    <section id="top" className="relative w-full overflow-visible" data-aos="zoom-in-up">
+    <section id="top" aria-labelledby="hero-title" className="relative w-full overflow-visible" data-aos="zoom-in-up">
       <div className="relative mx-auto w-full max-w-7xl px-5 sm:px-12 lg:px-8">
         <div className="relative mx-auto grid max-w-3xl gap-8 pb-10 pt-4 lg:min-h-[calc(100svh-5rem)] lg:max-w-none lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:gap-10 lg:pb-12 lg:pt-8">
           <div className="lg:py-4" data-aos="fade-right">
             <div className="text-center lg:text-left">
               {/* <p className="eyebrow mb-5 text-xs font-medium uppercase text-primary">Portfolio développeur · 2025</p> */}
               <p className="mb-4 text-sm font-medium uppercase tracking-[0.18em] text-slate-500">Hello, Je suis</p>
-              <h1 className="pt-2 text-5xl font-bold leading-[0.98] tracking-[-0.06em] text-white md:text-5xl lg:text-[4.5rem]">
+              <h1 id="hero-title" className="pt-2 text-5xl font-bold leading-[0.98] tracking-[-0.06em] text-white md:text-5xl lg:text-[4.5rem]">
                 Sani <span className="text-primary">Adrien</span>
               </h1>
               <div className="mt-6 h-10 overflow-hidden text-2xl font-semibold text-slate-200 md:text-3xl">

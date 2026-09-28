@@ -6,8 +6,8 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { EffectCoverflow, Navigation, Pagination } from "swiper/modules";
 import ProjectCard from "./ProjectCard.jsx";
+import Reveal from "./Reveal.jsx";
 
-import imageAdvisersAgency from "@/assets/projets/AdvisersAgency.png";
 import CRM_Recrutement_Frontend from "@/assets/projets/CRMRecrutementFrontend.png";
 import Simu_API from "@/assets/projets/SimuAPI.png";
 import MangaLib from "@/assets/projets/MangaLib.png";
@@ -161,33 +161,16 @@ const PROJECTS = [
     type: "personal",
   },
 
-  {
-    title: "Advisers Agency",
-    description:
-      "Plateforme destinée aux élèves et étudiants à la recherche de bourses d'études.",
-    image: imageAdvisersAgency,
-    tags: [
-      "React",
-      "Python",
-      "Django",
-      "Django REST Framework",
-      "PostgreSQL",
-    ],
-    liveLink: "https://advisers-agency-view.vercel.app/home",
-    type: "personal",
-  },
 
   {
-    title: "CRM Recrutement",
+    title: "CRM Recrutement(FRONTEND)",
     description:
       "Application CRM permettant de gérer les utilisateurs, les clients et les projets avec une séparation entre le frontend et le backend.",
     image: CRM_Recrutement_Frontend,
     tags: [
       "Vue.js",
-      "Django",
-      "Django REST Framework",
       "Tailwind CSS",
-      "PostgreSQL",
+
     ],
     liveLink: "https://crm-project.adrien-dev.me/",
     codeLink: "https://github.com/adri-2/crm-project.git",
@@ -321,13 +304,14 @@ function ProjectSection() {
   return (
     <section
       id="projects"
+      aria-labelledby="projects-title"
       className="section-shell relative py-20 md:py-28"
       data-aos="fade-up"
     >
       <p className="mb-3 text-center text-xs font-semibold uppercase tracking-[0.25em] text-primary">
         Sélection de réalisations
       </p>
-      <h2 className="section-heading mb-8 text-center text-4xl font-bold text-white md:text-5xl">
+      <h2 id="projects-title" className="section-heading mb-8 text-center text-4xl font-bold text-white md:text-5xl">
         <span className="mr-4 inline-block">Mes</span>
         <span className="bg-linear-to-r from-primary to-secondary bg-clip-text text-transparent">
           Projets
@@ -359,7 +343,7 @@ function ProjectSection() {
 
       <div className="space-y-16">
         {visibleGroups.map(([type, projects]) => (
-          <div key={type} data-aos="fade-up">
+          <Reveal key={type}>
             <div className="mb-5 flex items-center gap-3">
               <span className="h-px flex-1 bg-white/10" />
               <h3 className="text-center text-lg font-semibold text-white">
@@ -372,7 +356,7 @@ function ProjectSection() {
               <span className="h-px flex-1 bg-white/10" />
             </div>
             <ProjectCarousel projects={projects} type={type} />
-          </div>
+          </Reveal>
         ))}
       </div>
     </section>

@@ -85,6 +85,7 @@ function ContactSection() {
     <section
       className="section-shell min-h-screen py-20 text-white md:py-28"
       id="contact"
+      aria-labelledby="contact-title"
       style={
         prefersReducedMotion ? { animation: "none" } : {}
       }
@@ -93,7 +94,7 @@ function ContactSection() {
         <div className="background-ring background-ring--two pointer-events-none absolute -right-16 top-10 opacity-40"></div>
 
         <div className="mb-12 text-center">
-          <h2 className="section-heading mb-4 text-4xl font-bold text-white md:text-5xl">
+          <h2 id="contact-title" className="section-heading mb-4 text-4xl font-bold text-white md:text-5xl">
             Travaillons{" "}
             <span className="text-transparent bg-clip-text bg-linear-to-r from-primary to-secondary">
               ensemble
